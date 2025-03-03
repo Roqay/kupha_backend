@@ -1,10 +1,9 @@
-@include('website.layout.master')
-
+@extends('website.layout.master')
 @section('content')
     <!-- Banner Start -->
     <section class="hero-slider-area">
         <div class="bg-banner">
-            <img src="./assets/images/banner/home-banner.jpg" alt="">
+            <img src="{{asset('assets/website/images/banner/home-banner.jpg')}}" alt="">
         </div>
     </section>
     <!--end Banner Start -->
@@ -16,48 +15,49 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-feature">
                         <div class="icon-holder">
-                            <img src="assets/images/features/1.svg" alt="Feature Image 1">
+                            <img src="{{ asset('assets/website/images/features/1.svg') }}" alt="Feature Image 1">
                         </div>
                         <div class="feature-body">
                             <h3>الخدمات الإلكترونية </h3>
                             <p>قم بإدارة ملف العضوية بالجمعية الصيدلية الكويتية من خلال المصادقة مع هويتي </p>
                         </div>
                         <div class="icon-link">
-                            <img src="assets/images/features/arrow-up-left.svg" alt="Feature Image 2">
+                            <img src="{{ asset('assets/website/images/features/arrow-up-left.svg') }}" alt="Feature Image 2">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-feature">
                         <div class="icon-holder">
-                            <img src="assets/images/features/2.svg" alt="Feature Image 2">
+                            <img src="{{ asset('assets/website/images/features/2.svg') }}" alt="Feature Image 2">
                         </div>
                         <div class="feature-body">
                             <h3>المجلة الطبية</h3>
                             <p>كعضو يمكنك الوصول إلي مجموعة من المقالات والمجلات الإلكترونية</p>
                         </div>
                         <div class="icon-link">
-                            <img src="assets/images/features/arrow-up-left.svg" alt="Feature Image 2">
+                            <img src="{{ asset('assets/website/images/features/arrow-up-left.svg') }}" alt="Feature Image 2">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="single-feature">
                         <div class="icon-holder">
-                            <img src="assets/images/features/3.svg" alt="Feature Image 3">
+                            <img src="{{ asset('assets/website/images/features/3.svg') }}" alt="Feature Image 3">
                         </div>
                         <div class="feature-body">
                             <h3>الندوات والمؤتمرات</h3>
-                            <p>اشترك في الندوات والمؤتمرات الطبية وال‘جتماعية</p>
+                            <p>اشترك في الندوات والمؤتمرات الطبية والاجتماعية</p>
                         </div>
                         <div class="icon-link">
-                            <img src="assets/images/features/arrow-up-left.svg" alt="Feature Image 2">
+                            <img src="{{ asset('assets/website/images/features/arrow-up-left.svg') }}" alt="Feature Image 2">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!--end feature -->
 
     <!-- about Section Start -->
@@ -70,43 +70,43 @@
                         <h2>الجمعية الصيدلية الكويتية</h2>
                         <p>
                             انشئت الجمعية الصيدلية الكويتية في دولة الكويت بتاريخ 23/10/1963 لتكون أول جمعية مهنية في
-                            دول
-                            مجلس التعاون الخليجي وهى تضم 19635 طبيب وطبيبة بشري يعملون في القطاعين الحكومي والخاص بدولة
-                            الكويت و يدير شئون الجمعية مجلس إدارة مكون من سبعة أعضاء ينتخبهم اعضاء الجمعية لمدة سنتان من
-                            بين أعضائها
+                            دول مجلس التعاون الخليجي، وهي تضم 19635 طبيبًا وطبيبة يعملون في القطاعين الحكومي والخاص بدولة
+                            الكويت، ويدير شئون الجمعية مجلس إدارة مكون من سبعة أعضاء ينتخبهم أعضاء الجمعية لمدة سنتين من
+                            بين أعضائها.
                         </p>
-                        <h3>ومن أهدافها</h3>
+                        <h3>أهداف الجمعية</h3>
                         <ul class="about-list">
                             <li>
                                 <i class="ri-checkbox-circle-fill"></i>
-                                السعي إلى رفع مستوى مهنة الطب والأطباء البشريين بما يحقق أكبر قدر من الرعاية الصحية .
+                                السعي إلى رفع مستوى مهنة الطب والأطباء البشريين بما يحقق أكبر قدر من الرعاية الصحية.
                             </li>
                             <li>
                                 <i class="ri-checkbox-circle-fill"></i>
-                                المحافظة على شرف المهنة وآدابها وأغراضها النبيلة ، وبحث الأمور المتعلقة بسلوك المهنة
-                                لأعضائها .
+                                المحافظة على شرف المهنة وآدابها وأغراضها النبيلة، وبحث الأمور المتعلقة بسلوك المهنة
+                                لأعضائها.
                             </li>
                             <li>
                                 <i class="ri-checkbox-circle-fill"></i>
-                                إجراء الدراسات والبحوث العلمية في مختلف فروع الطب التي تحقق مواكبة مهنة الطب في البلاد
-                                والتقدم والتطور في عالم الطب ، والتعاون مع الجامعات والكليات والمؤسسات العلمية المحلية
-                                والخارجية في هذا المجال .
+                                إجراء الدراسات والبحوث العلمية في مختلف فروع الطب لتحقيق مواكبة مهنة الطب في البلاد،
+                                والتقدم والتطور في عالم الطب، والتعاون مع الجامعات والكليات والمؤسسات العلمية المحلية
+                                والخارجية في هذا المجال.
                             </li>
                         </ul>
                         <div class="read-more-btns">
-                            <a href="login.html" class="primary-btn">تسجيل عضو بالجمعية</a>
-                            <a href="about.html" class="secondary-btn">عرض المزيد</a>
+                            <a href="#" class="primary-btn">تسجيل عضو بالجمعية</a>
+                            <a href="#" class="secondary-btn">عرض المزيد</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="about-img">
-                        <img src="assets/images/about/about.png" alt="About Image">
+                        <img src="{{ asset('assets/website/images/about/about.png') }}" alt="About Image">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- about Section End -->
 
     <!--counter section End -->
@@ -143,11 +143,11 @@
     </section>
     <!--counter section end -->
 
-    <!--our partners start -->
+    <!-- Our Partners Start -->
     <section class="partners-area ptb-32">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12 text-center">
+                <div class="col-12 text-center">
                     <span class="top-title centered">شركاؤنا</span>
                     <h2 class="section-title">الجمعية الصيدلية الكويتية</h2>
                     <p class="section-sub-title">
@@ -156,36 +156,36 @@
                 </div>
             </div>
             <div class="row justify-content-center align-items-center logos-row">
-                <div class="col-lg-2 col-md-4 col-sm-6 partner-logo">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-6 partner-logo">
                     <a href="https://partner1.com" target="_blank">
-                        <img src="assets/images/partners/1.png" alt="Partner 1">
+                        <img src="{{ asset('assets/website/images/partners/1.png') }}" alt="Partner 1" class="img-fluid">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 partner-logo">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-6 partner-logo">
                     <a href="https://partner2.com" target="_blank">
-                        <img src="assets/images/partners/2.png" alt="Partner 2">
+                        <img src="{{ asset('assets/website/images/partners/2.png') }}" alt="Partner 2" class="img-fluid">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 partner-logo">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-6 partner-logo">
                     <a href="https://partner3.com" target="_blank">
-                        <img src="assets/images/partners/3.png" alt="Partner 3">
+                        <img src="{{ asset('assets/website/images/partners/3.png') }}" alt="Partner 3" class="img-fluid">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 partner-logo">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-6 partner-logo">
                     <a href="https://partner4.com" target="_blank">
-                        <img src="assets/images/partners/4.png" alt="Partner 4">
+                        <img src="{{ asset('assets/website/images/partners/4.png') }}" alt="Partner 4" class="img-fluid">
                     </a>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 partner-logo">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-6 partner-logo">
                     <a href="https://partner5.com" target="_blank">
-                        <img src="assets/images/partners/5.png" alt="Partner 5">
+                        <img src="{{ asset('assets/website/images/partners/5.png') }}" alt="Partner 5" class="img-fluid">
                     </a>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Our Partners End -->
 
-    <!--our partners end -->
 
     <!--team-members  start -->
     <section class="team-members-area ptb-32">
@@ -200,7 +200,7 @@
                 <div class="team-members-slider  owl-carousel owl-theme">
                     <div class="item">
                         <div class="img-wrapper">
-                            <img src="./assets/images/team/1.png" alt="team image">
+                            <img src="{{asset('assets/website/images/team/1.png')}}" alt="team image">
                         </div>
                         <div class="caption">
                             <h6>الدكتور / إبراهيم طاولة</h6>
@@ -209,7 +209,7 @@
                     </div>
                     <div class="item">
                         <div class="img-wrapper">
-                            <img src="./assets/images/team/1.png" alt="team image">
+                            <img src="{{asset('assets/website/images/team/1.png')}}" alt="team image">
                         </div>
                         <div class="caption">
                             <h6>الدكتور / إبراهيم طاولة</h6>
@@ -218,7 +218,7 @@
                     </div>
                     <div class="item">
                         <div class="img-wrapper">
-                            <img src="./assets/images/team/1.png" alt="team image">
+                            <img src="{{asset('assets/website/images/team/1.png')}}" alt="team image">
                         </div>
                         <div class="caption">
                             <h6>الدكتور / إبراهيم طاولة</h6>
@@ -227,7 +227,7 @@
                     </div>
                     <div class="item">
                         <div class="img-wrapper">
-                            <img src="./assets/images/team/1.png" alt="team image">
+                            <img src="{{asset('assets/website/images/team/1.png')}}" alt="team image">
                         </div>
                         <div class="caption">
                             <h6>الدكتور / إبراهيم طاولة</h6>
@@ -236,7 +236,7 @@
                     </div>
                     <div class="item">
                         <div class="img-wrapper">
-                            <img src="./assets/images/team/1.png" alt="team image">
+                            <img src="{{asset('assets/website/images/team/1.png')}}" alt="team image">
                         </div>
                         <div class="caption">
                             <h6>الدكتور / إبراهيم طاولة</h6>
@@ -245,7 +245,7 @@
                     </div>
                     <div class="item">
                         <div class="img-wrapper">
-                            <img src="./assets/images/team/1.png" alt="team image">
+                            <img src="{{asset('assets/website/images/team/1.png')}}" alt="team image">
                         </div>
                         <div class="caption">
                             <h6>الدكتور / إبراهيم طاولة</h6>
@@ -274,7 +274,7 @@
                 <div class="col-lg-7 col-md-7 col-sm-12 d-flex flex-row gap-4">
                     <div class="col-lg-6 col-md-6 col-sm-12 news-item-block">
                         <div class="banner-holder">
-                            <img src="./assets/images/news/banner.png" alt="banner">
+                            <img src="{{asset('assets/website/images/news/banner.png')}}" alt="banner">
                         </div>
                         <div class="content">
                             <span class="date">18 مارس 2024 - 10:00 م</span>
@@ -284,7 +284,7 @@
                                 والأنباء المتعلقة به .
                             </p>
                             <div class="control">
-                                <a href="news-details.html" class="read-more">
+                                <a href="#" class="read-more">
                                     عرض المزيد
                                     <i class="ri-arrow-left-fill"></i>
                                 </a>
@@ -293,7 +293,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 news-item-block">
                         <div class="banner-holder">
-                            <img src="./assets/images/news/banner.png" alt="banner">
+                            <img src="{{asset('assets/website/images/news/banner.png')}}" alt="banner">
                         </div>
                         <div class="content">
                             <span class="date">18 مارس 2024 - 10:00 م</span>
@@ -303,7 +303,7 @@
                                 والأنباء المتعلقة به .
                             </p>
                             <div class="control">
-                                <a href="news-details.html" class="read-more">
+                                <a href="#" class="read-more">
                                     عرض المزيد
                                     <i class="ri-arrow-left-fill"></i>
                                 </a>
@@ -314,9 +314,9 @@
                 <div class="col-lg-5 col-md-5 col-sm-12">
                     <ul class="recent-news">
                         <li>
-                            <a href="news-details.html">
+                            <a href="#">
                                 <div class="news-img">
-                                    <img src="assets/images/news/icon.svg" alt="news image">
+                                    <img src="{{asset('assets/website/images/news/icon.svg')}}" alt="news image">
                                 </div>
                                 <div class="news-content">
                                     <h3>اشهار رابطة أطباء زراعة الأعضاء الكويتية</h3>
@@ -325,9 +325,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="news-details.html">
+                            <a href="#">
                                 <div class="news-img">
-                                    <img src="assets/images/news/icon.svg" alt="news image">
+                                    <img src="{{asset('assets/website/images/news/icon.svg')}}" alt="news image">
                                 </div>
                                 <div class="news-content">
                                     <h3>اشهار رابطة أطباء زراعة الأعضاء الكويتية</h3>
@@ -336,9 +336,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="news-details.html">
+                            <a href="#">
                                 <div class="news-img">
-                                    <img src="assets/images/news/icon.svg" alt="news image">
+                                    <img src="{{asset('assets/website/images/news/icon.svg')}}" alt="news image">
                                 </div>
                                 <div class="news-content">
                                     <h3>اشهار رابطة أطباء زراعة الأعضاء الكويتية</h3>
@@ -347,9 +347,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="news-details.html">
+                            <a href="#">
                                 <div class="news-img">
-                                    <img src="assets/images/news/icon.svg" alt="news image">
+                                    <img src="{{asset('assets/website/images/news/icon.svg')}}" alt="news image">
                                 </div>
                                 <div class="news-content">
                                     <h3>اشهار رابطة أطباء زراعة الأعضاء الكويتية</h3>
@@ -398,7 +398,7 @@
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 no-padding">
                     <div class="support-img-holder">
-                        <img src="assets/images/banner/support.png" alt="support image">
+                        <img src="{{asset('assets/website/images/banner/support.png')}}" alt="support image">
                     </div>
                 </div>
             </div>
@@ -418,29 +418,29 @@
             <div class="row">
                 <div class="latest-offers-slider  owl-carousel owl-theme">
                     <div class="item">
-                        <img src="./assets/images/offers/1.png" alt="offer image">
+                        <img src="{{asset('assets/website/images/offers/1.png')}}" alt="offer image">
                     </div>
                     <div class="item">
-                        <img src="./assets/images/offers/2.png" alt="offer image">
+                        <img src="{{asset('assets/website/images/offers/1.png')}}" alt="offer image">
                     </div>
                     <div class="item">
-                        <img src="./assets/images/offers/3.png" alt="offer image">
+                        <img src="{{asset('assets/website/images/offers/3.png')}}" alt="offer image">
                     </div>
                     <div class="item">
-                        <img src="./assets/images/offers/2.png" alt="offer image">
+                        <img src="{{asset('assets/website/images/offers/1.png')}}" alt="offer image">
                     </div>
                     <div class="item">
-                        <img src="./assets/images/offers/3.png" alt="offer image">
+                        <img src="{{asset('assets/website/images/offers/3.png')}}" alt="offer image">
                     </div>
                     <div class="item">
-                        <img src="./assets/images/offers/1.png" alt="offer image">
+                        <img src="{{asset('assets/website/images/offers/1.png')}}" alt="offer image">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="read-more-btns">
-                        <a href="about.html" class="secondary-btn">عرض المزيد</a>
+                        <a href="#" class="secondary-btn">عرض المزيد</a>
                     </div>
                 </div>
             </div>
