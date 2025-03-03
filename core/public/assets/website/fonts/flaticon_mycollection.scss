@@ -1,0 +1,81 @@
+$flaticon_mycollection-font: "flaticon_mycollection";
+
+@font-face {
+    font-family: $flaticon_mycollection-font;
+    src: url("./flaticon_mycollection.ttf?0ad9ffa0fdab73336588b6e6f948436e") format("truetype"),
+url("./flaticon_mycollection.woff?0ad9ffa0fdab73336588b6e6f948436e") format("woff"),
+url("./flaticon_mycollection.woff2?0ad9ffa0fdab73336588b6e6f948436e") format("woff2"),
+url("./flaticon_mycollection.eot?0ad9ffa0fdab73336588b6e6f948436e#iefix") format("embedded-opentype"),
+url("./flaticon_mycollection.svg?0ad9ffa0fdab73336588b6e6f948436e#flaticon_mycollection") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_mycollection-map: (
+    "001-heart": "\f101",
+    "002-charity": "\f102",
+    "003-donate": "\f103",
+    "004-donation": "\f104",
+    "005-homeless": "\f105",
+    "006-homeless-1": "\f106",
+    "007-zakat": "\f107",
+    "008-zakat-1": "\f108",
+    "009-gift-box": "\f109",
+    "010-gift-card": "\f10a",
+    "011-gift-card-1": "\f10b",
+    "012-perspective": "\f10c",
+    "013-project": "\f10d",
+    "014-nabawi-mosque": "\f10e",
+);
+
+.flaticon-001-heart:before {
+    content: map-get($flaticon_mycollection-map, "001-heart");
+}
+.flaticon-002-charity:before {
+    content: map-get($flaticon_mycollection-map, "002-charity");
+}
+.flaticon-003-donate:before {
+    content: map-get($flaticon_mycollection-map, "003-donate");
+}
+.flaticon-004-donation:before {
+    content: map-get($flaticon_mycollection-map, "004-donation");
+}
+.flaticon-005-homeless:before {
+    content: map-get($flaticon_mycollection-map, "005-homeless");
+}
+.flaticon-006-homeless-1:before {
+    content: map-get($flaticon_mycollection-map, "006-homeless-1");
+}
+.flaticon-007-zakat:before {
+    content: map-get($flaticon_mycollection-map, "007-zakat");
+}
+.flaticon-008-zakat-1:before {
+    content: map-get($flaticon_mycollection-map, "008-zakat-1");
+}
+.flaticon-009-gift-box:before {
+    content: map-get($flaticon_mycollection-map, "009-gift-box");
+}
+.flaticon-010-gift-card:before {
+    content: map-get($flaticon_mycollection-map, "010-gift-card");
+}
+.flaticon-011-gift-card-1:before {
+    content: map-get($flaticon_mycollection-map, "011-gift-card-1");
+}
+.flaticon-012-perspective:before {
+    content: map-get($flaticon_mycollection-map, "012-perspective");
+}
+.flaticon-013-project:before {
+    content: map-get($flaticon_mycollection-map, "013-project");
+}
+.flaticon-014-nabawi-mosque:before {
+    content: map-get($flaticon_mycollection-map, "014-nabawi-mosque");
+}

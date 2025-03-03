@@ -18,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/', function () {
+    return view('website.index');
+});
+
+
 // Language Route
 Route::post('/lang', [LanguageController::class, 'index'])->middleware('LanguageSwitcher')->name('lang');
 // For Language direct URL link

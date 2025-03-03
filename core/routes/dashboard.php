@@ -19,9 +19,9 @@ use App\Http\Controllers\Dashboard\FileManagerController;
 use Illuminate\Support\Facades\Route;
 
 
-
+Route::post('login',[DashboardController::class,'login']);
 // Admin Home
-Route::get('/', [DashboardController::class, 'index'])->name('adminHome');
+Route::get('/home', [DashboardController::class, 'index'])->name('adminHome');
 //Search
 Route::get('/search', [DashboardController::class, 'search'])->name('adminSearch');
 Route::post('/find', [DashboardController::class, 'find'])->name('adminFind');
