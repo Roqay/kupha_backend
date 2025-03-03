@@ -41,7 +41,7 @@
                 <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="#"><img src="{{ asset('assets/website/images/logo.svg') }}" alt=""></a>
+                            <a href="{{url('/')}}"><img src="{{ asset('assets/website/images/logo.svg') }}" alt=""></a>
                         </div>
                         <p>
                             انشئت الجمعية الصيدلية الكويتية في دولة الكويت بتاريخ 23/10/1963 لتكون أول جمعية مهنية
@@ -57,7 +57,7 @@
                             <h4>النقابة</h4>
                             <ul class="footer-menu">
                                 <li><a href="#">الرئيسية</a></li>
-                                <li><a href="#">من نحن</a></li>
+                                <li><a href="{{route('about')}}">من نحن</a></li>
                                 <li><a href="#">العضوية</a></li>
                                 <li><a href="#">الأخبار</a></li>
                             </ul>
