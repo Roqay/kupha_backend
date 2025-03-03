@@ -3,7 +3,7 @@
         <div class="container">
             <div class="mobile-responsive-menu">
                 <div class="logo">
-                    <a href="#">
+                    <a href="{{url('/')}}">
                         <img src="{{ asset('assets/website/images/logo.svg') }}" alt="logo">
                     </a>
                 </div>
@@ -13,7 +13,7 @@
     <div class="desktop-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{url('/')}}">
                     <img src="{{ asset('assets/website/images/logo.svg') }}" alt="logo">
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
