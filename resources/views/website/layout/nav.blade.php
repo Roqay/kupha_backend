@@ -24,7 +24,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">من نحن <i class="ri-arrow-down-s-line"></i></a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item"><a href="#" class="nav-link">عن الجمعية</a></li>
+                                <li class="nav-item"><a href="{{route('about')}}" class="nav-link">عن الجمعية</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link">الرسالة</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link">مجلس الإدارة</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link">الروابط</a></li>

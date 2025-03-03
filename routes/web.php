@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('website.index');
-});
+
+Route::get('/',[\App\Http\Controllers\WebSite\HomeController::class,'index']);
+Route::get('/about',[\App\Http\Controllers\WebSite\HomeController::class,'about'])->name('about');
 
 
 // Language Route
