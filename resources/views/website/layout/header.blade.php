@@ -16,5 +16,5 @@
     <link rel="stylesheet" href="{{ asset('assets/website/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/website/css/responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/website/css/rtl.css') }}">
-    <link rel="icon" type="image/png" href="{{ asset('website/assets/images/logo.svg') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/website/images/logo.svg') }}">
 </head>
