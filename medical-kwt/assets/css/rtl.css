@@ -1,0 +1,590 @@
+/*===========================
+  1. fonts
+============================*/
+@font-face {
+  font-family: "Expo Arabic";
+  src: url("../fonts/ExpoArabic-Book.ttf");
+}
+@font-face {
+  font-family: "Hacen Saudi Arabia";
+  src: url("../fonts/Hacen_Saudi_Arabia.ttf");
+}
+@font-face {
+  font-family: "Hanimation Arabic";
+  src: url("../fonts/Hanimation_Arabic_Regular.otf");
+}
+@font-face {
+  font-family: "El Messiri";
+  src: url("../fonts/ElMessiri-Regular.ttf");
+}
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hanimation Arabic";
+}
+
+/* ===============================================
+  General
+------------------------*/
+
+/* ===============================================
+------------------------*/
+.banner-content h1,
+.cause-wrap .cause-cnt h4 a,
+.cause-wrap .cause-cnt .donate-bar span,
+.single-cause .cause-tag a,
+.single-news .news-inner,
+.single-news .news-inner .date-tag span,
+.single-news .news-inner h4 a,
+.copy-txt p,
+.subscribe form input,
+.subscribe form input[type="submit"],
+.cause-wrap .view-btn a,
+.intro-right span,
+.contact-form form input[type="submit"],
+.contact-form form textarea[type="submit"] {
+  font-family: "Hanimation Arabic";
+}
+.search-modal-area .modal-content form.search-box .search-input .search-btn {
+  right: auto;
+  left: 30px;
+}
+
+.search-modal-area .modal-content .closer-btn {
+  right: auto;
+  left: 30px;
+}
+
+.desktop-nav .navbar .others-options ul li {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+.desktop-nav .navbar .others-options ul li:last-child {
+  margin-left: 0;
+}
+
+.desktop-nav
+  .navbar
+  .others-options
+  ul
+  li
+  .navbar-option-language
+  .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+.desktop-nav
+  .navbar
+  .others-options
+  ul
+  li
+  .navbar-option-language
+  .dropdown-menu
+  .dropdown-item
+  img {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.desktop-nav .navbar .others-options ul li .navbar-option-language button i {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.desktop-nav .navbar .navbar-nav {
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.desktop-nav .navbar .navbar-nav .nav-item a {
+  font-family: "Hanimation Arabic";
+}
+.desktop-nav .navbar .others-options ul li .navbar-option-language button {
+  color: var(--Color, #091a32);
+  text-align: center;
+  font-family: "Expo Arabic";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+
+.desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+  left: auto;
+  right: 250px;
+}
+
+.desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a i {
+  float: left;
+}
+
+.banner-area .banner-img {
+  right: auto;
+  left: 0;
+}
+
+.banner-content .banner-btn .call-wrap {
+  padding-left: 0;
+  padding-right: 70px;
+}
+
+.banner-content .banner-btn .call-wrap .call-us i {
+  left: auto;
+  right: 0;
+}
+
+.banner-content .banner-btn .default-btn {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.banner-content .social-link li span {
+  margin-right: 0;
+  margin-left: 100px;
+}
+
+.banner-content .social-link li span::before {
+  right: auto;
+  left: -95px;
+}
+
+.banner-content .social-link li:last-child {
+  margin-right: 10px;
+}
+
+.section-title.section-title-left {
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.our-causes-area .text-right {
+  text-align: left;
+}
+
+.single-causes .bar {
+  margin-right: 0;
+  margin-left: 50px;
+  padding-right: 0;
+  padding-left: 50px;
+}
+
+.single-causes .bar::before {
+  right: auto;
+  left: 0;
+}
+
+.single-causes.style-two .bar-percent {
+  left: 0;
+  right: auto;
+}
+
+.single-causes .causes-img .tag {
+  left: auto;
+  right: 20px;
+}
+
+.what-we-do-content ul li {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.what-we-do-content ul li i {
+  left: auto;
+  right: 0;
+}
+
+.gallery-area .text-right {
+  text-align: left;
+}
+
+.event-area .text-right {
+  text-align: left;
+}
+
+.single-event ul li {
+  padding-left: 0;
+  padding-right: 22px;
+}
+
+.single-event ul li i {
+  left: auto;
+  right: 0;
+}
+
+.single-event .event-img .date {
+  right: auto;
+  left: 20px;
+}
+
+.volunteers-area .text-right {
+  float: left;
+}
+
+.blog-post-area .text-right {
+  text-align: left;
+}
+
+.single-blog .date {
+  right: auto;
+  left: 20px;
+}
+
+.banner-area .banner-img-2 {
+  right: auto;
+  left: 30px;
+}
+
+.ml-15 {
+  margin-left: 0 !important;
+  margin-right: 15px !important;
+}
+
+.mr-15 {
+  margin-left: 15px !important;
+  margin-right: 0 !important;
+}
+.donation-form ul li {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.donation-form ul li .single-check {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.checkmark {
+  left: auto;
+  right: 0;
+}
+
+.donation-content ul li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.slides-wrap .owl-carousel .owl-slide::before {
+  left: auto;
+  right: 0;
+  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.help-area::before {
+  -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  left: 0;
+  right: auto;
+}
+.page-title-area .page-title-content ul {
+  padding: 0;
+}
+
+.page-title-area .page-title-content ul li {
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 15px !important;
+  padding-left: 15px;
+}
+
+.page-title-area .page-title-content ul li:last-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.page-title-area .page-title-content ul li::before {
+  right: auto;
+  left: -3px;
+}
+
+.blog-details-content .share-link {
+  float: left;
+}
+
+.blog-details-content .share-link .social-icon li:last-child {
+  margin-right: 10px;
+}
+
+.blog-details-content .share-link .social-icon li:first-child {
+  margin-right: 0;
+}
+
+.blog-details-content .comment li {
+  padding-left: 0;
+  padding-right: 100px;
+}
+
+.blog-details-content .comment li img {
+  left: auto;
+  right: 0;
+}
+
+.blog-details-content .comment li .read-more {
+  right: auto;
+  left: 0;
+}
+
+.blog-details-content .blog-top-content blockquote {
+  padding-left: 0;
+  padding-right: 130px;
+  border-left: none;
+  border-right: 2px solid var(--main-color);
+}
+
+.blog-details-content .blog-top-content blockquote img {
+  left: auto;
+  right: 30px;
+}
+
+.desktop-nav .navbar .others-options ul li .social-link li {
+  margin-left: 0;
+}
+
+.desktop-nav .navbar .others-options ul li .social-link li:last-child {
+  margin-right: 10px;
+}
+
+.sidebar-widget.search .search-form .search-button {
+  right: auto;
+  left: 8px;
+}
+
+.sidebar-widget.recent-post ul li {
+  padding-left: 0;
+  padding-right: 90px;
+}
+
+.sidebar-widget.recent-post ul li img {
+  left: auto;
+  right: 0;
+}
+
+.main-contact-area .form-group.checkboxs p {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.main-contact-area .form-group.checkboxs #chb2 {
+  left: auto;
+  right: 0;
+}
+
+.single-blog .blog-content ul li {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.single-blog .blog-content ul li::before {
+  right: auto;
+  left: -14px;
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .banner-content .social-link li span {
+    margin-left: 0;
+  }
+  .banner-content .social-link li span::before {
+    display: none;
+  }
+
+  .blog-details-content .comment li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .banner-content .social-link li span {
+    margin-left: 0;
+  }
+  .banner-content .social-link li span::before {
+    display: none;
+  }
+
+  .blog-details-content .comment li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .mobile-responsive-nav .mean-container a.meanmenu-reveal {
+    right: auto !important;
+    left: 0 !important;
+  }
+  .mobile-responsive-nav .mean-container .mean-nav ul li a {
+    text-align: right;
+    float: right;
+  }
+  .mobile-responsive-nav .mean-container .mean-nav ul li a.mean-expand {
+    text-align: left !important;
+    right: unset;
+    left: 0;
+  }
+  .mobile-responsive-nav .logo {
+    left: -40px;
+    right: auto;
+  }
+  .others-option-for-responsive .dot-menu {
+    left: 60px;
+    right: auto;
+    top: -55px;
+  }
+  .mobile-responsive-nav .logo {
+    left: auto;
+    right: 0;
+  }
+}
+.cause-wrap .cause-cnt .donate-bar .label {
+  margin-left: 5px;
+  margin-right: 0px;
+  font-size: 11px;
+}
+.cause-wrap .cause-cnt .donate-bar .precentage {
+}
+.cause-wrap .cause-cnt .donate-bar .donate-done:before {
+  left: 0;
+  right: auto;
+}
+.single-news .news-inner .date-tag span i {
+  position: relative;
+  right: 0px;
+  float: right;
+  padding-left: 5px;
+  padding-right: 0px;
+  left: auto;
+}
+.single-news .news-inner .date-tag span {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.contact-info h4 {
+  font-weight: 700;
+  font-size: 17px;
+  color: #fff;
+  margin-left: 95px;
+  margin-right: 0px;
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 0;
+  min-width: 130px;
+}
+.info .icon {
+  margin-left: 15px;
+  margin-right: 0px;
+}
+.subscribe form input[type="submit"] {
+  left: 5px;
+  right: auto;
+}
+.subscribe form input[type="email"] {
+  padding-left: 105px;
+  padding-right: 10px;
+  text-align: right;
+}
+.faq-accordion .accordion .accordion-title i {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  right: auto;
+}
+.single-info .icon {
+  margin-right: 0px;
+  margin-left: 20px;
+}
+.user-area .user-form-content .user-form .login-action .forgot-login {
+  display: inline-block;
+  float: left !important;
+}
+.calculateZakah .topNav li .accordion-button:not(.collapsed),
+.calculateZakah .topNav li .accordion-button:not(.collapsed):hover {
+  text-align: right;
+  padding-right: 24px;
+  padding-left: 0px;
+}
+.calculateZakah .accordion > .card > .card-header button,
+.calculateZakah .accordion > .card > .card-header button:hover {
+  width: 100%;
+  text-align: right;
+}
+.kafala-details-area .input-group > .form-control {
+  text-align: right;
+}
+.sidebar-widget h3::before {
+  right: -20px;
+  left: auto;
+}
+/*************************************/
+.primary-btn,
+.secondary-btn {
+  font-family: "Hanimation Arabic";
+}
+.desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
+  color: #797b7a;
+  text-align: right;
+  font-family: "Expo Arabic";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+.desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu li:hover a {
+  color: #15a570;
+}
+
+.single-feature .feature-body h3,
+.single-feature .feature-body p,
+.top-title,
+.about-content h3,
+.about-content p,
+.about-list li,
+.footer-widget p,
+.footer-widget h4,
+.footer-bottom .copy-txt p,
+.footer-bottom .copy-txt a,
+.working-hours-area .single-hours .hours-content h3,
+.working-hours-area .single-hours .hours-content p,
+.counter-area .single-counter .counter-content h3,
+.support-form-holder .form-title,
+.section-title,
+.news-area .recent-news li .news-content h3,
+.news-area .recent-news li .news-content span,
+.news-item-block .content .date,
+.team-members-slider .item .caption h6,
+.team-members-slider .item .caption span,
+.news-item-block .content h3 {
+  font-family: "Hanimation Arabic";
+}
+.counter-area .single-counter .counter-content p {
+  font-family: "Hacen Saudi Arabia";
+}
+
+.footer-menu li a {
+  font-family: "El Messiri";
+}
+.section-sub-title,
+.support-form-holder form input,
+.support-form-holder form textarea,
+.news-item-block .content p {
+  font-family: "Expo Arabic";
+}
+.latest-offers-area .section-title,
+.support-form-holder form input,
+.support-form-holder form textarea {
+  text-align: right;
+}
