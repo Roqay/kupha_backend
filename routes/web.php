@@ -18,12 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-Route::get('/',[\App\Http\Controllers\WebSite\HomeController::class,'index']);
-Route::get('/about',[\App\Http\Controllers\WebSite\HomeController::class,'about'])->name('about');
-
-
 // Language Route
 Route::post('/lang', [LanguageController::class, 'index'])->middleware('LanguageSwitcher')->name('lang');
 // For Language direct URL link
@@ -70,9 +64,10 @@ Route::post('/order', [HomeController::class, 'order_submit'])->name('orderSubmi
 
 // - Contact page form submit
 Route::post('/contact-submit', [HomeController::class, 'contact_submit'])->name('contactPageSubmit');
-
+ 
 // - Contact page ( www.site.com/contact )
 Route::get('/contact', [HomeController::class, 'contact_page'])->name('contactPage');
+Route::get('/{lang?}/about', [HomeController::class, 'about_page'])->name('aboutPage');
 Route::get('/{lang?}/contact', [HomeController::class, 'contact_page'])->name('contactPageByLang');
 
 // - All Other slugs

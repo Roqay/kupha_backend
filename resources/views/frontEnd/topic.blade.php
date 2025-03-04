@@ -1,4 +1,4 @@
-@extends('frontEnd.layouts.master')
+@extends('frontEnd.kupha.layouts.master')
 
 @section('content')
     <div>

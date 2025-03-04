@@ -32,9 +32,9 @@ class HomeController extends Controller
     {
         // check if script not installed yet.
         // check for installation
-        if (!File::exists('core/storage/installed')) {
-            Redirect::to('/install')->send();
-        }
+        // if (!File::exists('core/storage/installed')) {
+        //     Redirect::to('/install')->send();
+        // }
 
         // check if website is closed or active
         $this->website_status();
@@ -47,7 +47,7 @@ class HomeController extends Controller
     }
 
     public function seo($part1 = "", $part2 = "", $part3 = "", $part4 = "", $part5 = "", $part6 = "")
-    {
+    { 
         $languages_codes = Language::where("status", 1)->pluck("code")->toarray();
         if (in_array(strtolower($part1), $languages_codes)) {
             // part1 is lang
@@ -64,23 +64,28 @@ class HomeController extends Controller
             $lang = config('roqay.default_language');
             $this->set_language($lang);
         }
+        
+        
 
         if ($part1 == "") {
             // home page
-            return view("frontEnd.home", ["page_type" => "home"]);
+            return view("frontEnd.". config('theme.THEME').".home", ["page_type" => "home"]);
         }
 
         $WebmasterSection = WebmasterSection::where('status', 1)->where("seo_url_slug_" . $lang, $part1)->first();
         if (empty($WebmasterSection)) {
             $WebmasterSection = WebmasterSection::where('status', 1)->where("title_" . $lang, $part1)->first();
         }
+       
         if (empty($WebmasterSection)) {
             // for direct landing pages like "website.com/about"
             $Topic = Topic::where('status', 1)->where("webmaster_id", 1)->where("seo_url_slug_" . $lang, $part1)->first();
             if (!empty($Topic)) {
                 return $this->post_page($lang, $Topic);
             }
+            
         }
+      
         if (!empty($WebmasterSection)) {
 
             // if private redirect back to home
@@ -160,6 +165,32 @@ class HomeController extends Controller
                 }
             }
             return $this->list_page($lang, $WebmasterSection);
+        }
+        return $this->page_404();
+    }
+
+
+    public function about_page($lang = "")
+    { 
+        $about_page_id = 28; 
+        if ($about_page_id > 0) {
+            $Topic = Topic::find($about_page_id);
+            if (!empty($Topic)) {
+                if ($lang != "") {
+                    $languages_codes = Language::where("status", 1)->pluck("code")->toarray();
+                    if (in_array(strtolower($lang), $languages_codes)) {
+                        $lang = strtolower($lang);
+                        $this->set_language($lang);
+                    } else {
+                        $lang = "";
+                    }
+                }
+                if ($lang == "") {
+                    $lang = config('prosys.default_language');
+                } 
+               
+                return $this->post_page($lang, $Topic);
+            }
         }
         return $this->page_404();
     }
@@ -337,9 +368,9 @@ class HomeController extends Controller
 
             // count topics by Category
             $TopicsCountPerCat = $this->topics_count_per_category($WebmasterSection->id);
+ 
 
-
-            return view('frontEnd.' . $view, [
+            return view('frontEnd.kupha.' . $view, [
                 "PageTitle" => @$meta_tags["title"],
                 "PageDescription" => @$meta_tags["desc"],
                 "PageKeywords" => @$meta_tags["keywords"],
@@ -424,7 +455,7 @@ class HomeController extends Controller
                     $view = "custom." . $Topic->id;
                 }
 
-                return view('frontEnd.' . $view, [
+                return view('frontEnd.kupha.' . $view, [
                     "PageTitle" => @$meta_tags["title"],
                     "PageDescription" => @$meta_tags["desc"],
                     "PageKeywords" => @$meta_tags["keywords"],
