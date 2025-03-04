@@ -11,9 +11,9 @@
  
 
 <link rel="icon" href="{{ URL::asset('kupha/assets/images/favicon.ico')}}" type="image/x-icon">
-@if( @Helper::currentLanguage()->direction=="rtl")
+{{-- @if( @Helper::currentLanguage()->direction=="rtl") --}}
 <link rel="stylesheet" href="{{ asset('kupha/assets/css/bootstrap.rtl.min.css') }}">
-@endif
+{{-- @endif --}}
 <link rel="stylesheet" href="{{ asset('kupha/assets/css/owl.theme.default.min.css') }}">
 <link rel="stylesheet" href="{{ asset('kupha/assets/css/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ asset('kupha/assets/css/remixicon.css') }}">
@@ -29,11 +29,11 @@
 
 {{-- <link href="{{ URL::asset('assets/frontend/vendor/fontawesome/css/all.min.css') }}?v={{ Helper::system_version() }}"  rel="stylesheet" media/>  --}}
  <link href="{{ URL::asset('assets/frontend/vendor/fontawesome/css/font-awesome.min.css') }}?v={{ Helper::system_version() }}" rel="stylesheet" media/>
-@if( @Helper::currentLanguage()->direction=="rtl")
+{{-- @if( @Helper::currentLanguage()->direction=="rtl") --}}
 <link rel="stylesheet" href="{{ asset('kupha/assets/css/rtl.css') }}">
-    @else
+    {{-- @else
     <link rel="stylesheet" href="{{ URL::asset('kupha/assets/bootstrap/bootstrap.min.css')}}">
-@endif
+@endif --}}
 
 <!-- Favicon and Touch Icons -->
 @if(Helper::GeneralSiteSettings("style_fav") !="")
