@@ -47,7 +47,7 @@
                                             <img src="{{ asset('assets/website/images/language/english.png') }}" alt="Image"> English
                                         </a>
                                         <a class="dropdown-item" href="#">
-                                            <img src="{{ asset('assets/website/images/language/arabic.png') }}" alt="Image"> العربية
+                                            <img src="{{ asset('assets/website/images/language/arbic.png') }}" alt="Image"> العربية
                                         </a>
                                     </div>
                                 </div>

@@ -15,7 +15,7 @@
                 <h5 class="text-muted m-b-0"><strong>{{ __('backend.signedInToControl') }}</strong></h5>
             </div>
             <div class="p-a-md">
-            <form name="form" method="POST" action="{{ route('/'.config('roqay.backend_path').'/login') }}" onsubmit="document.getElementById('login_form_submit').disabled = true; return true;">
+            <form name="form" method="POST" action="{{ route('login') }}" onsubmit="document.getElementById('login_form_submit').disabled = true; return true;">
                 {{ csrf_field() }}
                 @if($errors ->any())
                     <div class="alert alert-danger m-b-0">
