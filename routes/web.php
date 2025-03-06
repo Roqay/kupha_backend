@@ -64,7 +64,7 @@ Route::post('/order', [HomeController::class, 'order_submit'])->name('orderSubmi
 
 // - Contact page form submit
 Route::post('/contact-submit', [HomeController::class, 'contact_submit'])->name('contactPageSubmit');
- 
+
 // - Contact page ( www.site.com/contact )
 Route::get('/contact', [HomeController::class, 'contact_page'])->name('contactPage');
 Route::get('/{lang?}/about', [HomeController::class, 'about_page'])->name('aboutPage');

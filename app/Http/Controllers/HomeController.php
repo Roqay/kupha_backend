@@ -42,12 +42,13 @@ class HomeController extends Controller
 
     private function set_language($lang): void
     {
+        $lang = 'ar';
         App::setLocale($lang);
         session(['locale' => $lang]);
     }
 
     public function seo($part1 = "", $part2 = "", $part3 = "", $part4 = "", $part5 = "", $part6 = "")
-    { 
+    {
         $languages_codes = Language::where("status", 1)->pluck("code")->toarray();
         if (in_array(strtolower($part1), $languages_codes)) {
             // part1 is lang
@@ -64,8 +65,8 @@ class HomeController extends Controller
             $lang = config('roqay.default_language');
             $this->set_language($lang);
         }
-        
-        
+
+
 
         if ($part1 == "") {
             // home page
@@ -76,16 +77,16 @@ class HomeController extends Controller
         if (empty($WebmasterSection)) {
             $WebmasterSection = WebmasterSection::where('status', 1)->where("title_" . $lang, $part1)->first();
         }
-       
+
         if (empty($WebmasterSection)) {
             // for direct landing pages like "website.com/about"
             $Topic = Topic::where('status', 1)->where("webmaster_id", 1)->where("seo_url_slug_" . $lang, $part1)->first();
             if (!empty($Topic)) {
                 return $this->post_page($lang, $Topic);
             }
-            
+
         }
-      
+
         if (!empty($WebmasterSection)) {
 
             // if private redirect back to home
@@ -171,8 +172,8 @@ class HomeController extends Controller
 
 
     public function about_page($lang = "")
-    { 
-        $about_page_id = 28; 
+    {
+        $about_page_id = 28;
         if ($about_page_id > 0) {
             $Topic = Topic::find($about_page_id);
             if (!empty($Topic)) {
@@ -187,8 +188,8 @@ class HomeController extends Controller
                 }
                 if ($lang == "") {
                     $lang = config('prosys.default_language');
-                } 
-               
+                }
+
                 return $this->post_page($lang, $Topic);
             }
         }
@@ -368,7 +369,7 @@ class HomeController extends Controller
 
             // count topics by Category
             $TopicsCountPerCat = $this->topics_count_per_category($WebmasterSection->id);
- 
+
 
             return view('frontEnd.kupha.' . $view, [
                 "PageTitle" => @$meta_tags["title"],
