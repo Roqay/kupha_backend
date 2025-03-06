@@ -38,6 +38,24 @@
                 <span>{{ $title }}</span>
             </div>
         </div>
+
+        <div class="page-title-area">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>{{ (@$search_word != "") ? __('backend.resultsFoundFor') . " [ " . @$search_word . " ]" : $title }}</h2>
+                    <ul>
+                        <li>
+                            <a href="{{ Helper::homeURL() }}">{{ __("backend.home") }}</a>
+                        </li>
+
+                        <li class="active">
+                            <a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $title }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="container bg-white contact_us_content py-3">
             <div class="d-flex about_company mt-4 contact_margin">
                 <hr class="separator">

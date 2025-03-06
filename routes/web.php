@@ -67,9 +67,9 @@ Route::post('/contact-submit', [HomeController::class, 'contact_submit'])->name(
 
 // - Contact page ( www.site.com/contact )
 Route::get('/contact', [HomeController::class, 'contact_page'])->name('contactPage');
-Route::get('/{lang?}/about', [HomeController::class, 'about_page'])->name('aboutPage');
 Route::get('/{lang?}/contact', [HomeController::class, 'contact_page'])->name('contactPageByLang');
 
 // - All Other slugs
 Route::get('/{part1?}/{part2?}/{part3?}/{part4?}/{part5?}/{part6?}', [HomeController::class, 'seo'])->name("frontendRoute");
 // End of Frontend Route
+Route::get('/{lang?}/about', [HomeController::class, 'about_page'])->name('aboutPage');

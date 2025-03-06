@@ -35,8 +35,8 @@
         }
         ?>
         @if($category_image !="")
-            @include("frontEnd.topic.cover")
-        @endif
+        @include('frontEnd.'. config('theme.THEME').'.topic.cover', ['pageTitle' => $title])
+    @endif
         <section class="breadcrumbs">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">

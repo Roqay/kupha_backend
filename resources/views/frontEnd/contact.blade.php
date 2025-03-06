@@ -28,19 +28,35 @@
             $section = "";
         }
         ?>
-        <section class="breadcrumbs">
+        <div class="page-title-area">
             <div class="container">
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2>{{ $title }}</h2>
-                    <ol>
-                        <li><a href="{{ Helper::homeURL() }}">{{ __("backend.home") }}</a></li>
-                        <li>{{ $title }}</li>
-                    </ol>
+                <div class="page-title-content">
+                    <h2>{{ (@$search_word != "") ? __('backend.resultsFoundFor') . " [ " . @$search_word . " ]" : $page_title }}</h2>
+                    <ul>
+                        <li>
+                            <a href="{{ Helper::homeURL() }}">{{ __("backend.home") }}</a>
+                        </li>
+                        @if(@$search_word != "")
+                            <li class="active">{!! __("backend.search") !!}</li>
+                        @elseif($webmaster_section_title != "")
+                            <li class="active">
+                                <a href="{{ Helper::sectionURL(@$WebmasterSection->id) }}">{!! $webmaster_section_title !!}</a>
+                            </li>
+                        @elseif(@$search_word != "")
+                            <li class="active">{{ @$search_word }}</li>
+                        @else
+                            <li class="active">{{ $User->name }}</li>
+                        @endif
+                        @if($category_title != "")
+                            <li class="active">
+                                <a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $category_title }}</a>
+                            </li>
+                        @endif
+                    </ul>
                 </div>
-
             </div>
-        </section>
+        </div>
+
 
         <section id="contact" class="contact">
             <div class="container">

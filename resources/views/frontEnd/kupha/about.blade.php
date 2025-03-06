@@ -16,8 +16,24 @@ if ($Topic->$details_var != "") {
 }
 @endphp
 @section('content')
-    @include('frontEnd.'. config('theme.THEME').'.homepage.about')
-    @include('frontEnd.'. config('theme.THEME').'.topic.team')
+
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>{{ (@$search_word != "") ? __('backend.resultsFoundFor') . " [ " . @$search_word . " ]" : $title }}</h2>
+            <ul>
+                <li>
+                    <a href="{{ Helper::homeURL() }}">{{ __("backend.home") }}</a>
+                </li>
+
+                <li class="active">
+                    <a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $title }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    @include('frontEnd.'. config('theme.THEME').'.homepage.row5')
     {{-- @include('frontEnd.'. config('theme.THEME').'.topic.whyus')
     @include('frontEnd.'. config('theme.THEME').'.homepage.contact') --}}
 @endsection

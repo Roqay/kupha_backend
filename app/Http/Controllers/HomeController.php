@@ -455,7 +455,7 @@ class HomeController extends Controller
                 if (@File::exists('core/resources/views/frontEnd/custom/' . $Topic->id . ".blade.php")) {
                     $view = "custom." . $Topic->id;
                 }
-
+                // $view = "about";
                 return view('frontEnd.kupha.' . $view, [
                     "PageTitle" => @$meta_tags["title"],
                     "PageDescription" => @$meta_tags["desc"],

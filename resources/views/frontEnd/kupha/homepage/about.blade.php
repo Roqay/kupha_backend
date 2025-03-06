@@ -13,8 +13,8 @@ $HomePage = Helper::Topic(121 );
             <span class="mx-3">عن الشركة</span>
             <hr class="separator">
         </div>
-        {!! @$HomePage->$details_var !!} 
+        {!! @$HomePage->$details_var !!}
     </div>
-</div> 
+</div>
 @endif
 @endif

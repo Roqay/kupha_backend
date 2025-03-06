@@ -1,5 +1,6 @@
 @extends('frontEnd.'. config('theme.THEME').'.layouts.master')
 @section('content')
+
     <div>
         <?php
         $title_var = 'title_' . @Helper::currentLanguage()->code;
@@ -26,12 +27,12 @@
         } catch (Exception $e) {
             $section = '';
         }
-        
+
         $webmaster_section_title = '';
         $category_title = '';
         $page_title = '';
         $category_image = '';
-        
+
         if (@$WebmasterSection != 'none') {
             if (@$WebmasterSection->$title_var != '') {
                 $webmaster_section_title = @$WebmasterSection->$title_var;
@@ -54,7 +55,7 @@
                 $category_image = URL::to('uploads/sections/' . @$CurrentCategory->photo);
             }
         }
-        
+
         $attach_file = @$Topic->attach_file;
         if (@$Topic->attach_file != '') {
             $file_ext = strrchr($Topic->attach_file, '.');
@@ -66,165 +67,21 @@
         }
         ?>
 
-   
-        <div class=" pt-5" style="background-color: #fafafa;">
-            <div class="container about_header">
-                <span><a href="{{ Helper::homeURL() }}">{{ __('backend.home') }}</a></span>
-               
 
-                @if ($webmaster_section_title != '')
-                <span>/</span>
-                    <span><a href="{{ Helper::sectionURL(@$WebmasterSection->id) }}">{!! @$WebmasterSection->id == 1 ? $title : $webmaster_section_title !!}</a>
-                    </span>
-                @else
-                <span>/</span>
-                    <span>{{ $title }}</span>
-                @endif
-                
-                @if ($category_title != '')
-                <span>/</span>
-                    <span><a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $category_title }}</a>
-                    </span>
-                @endif
-            </div>
-        </div>
 
-        {{-- <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                <div class="row mt-3">
-                    <div class="col-3">
-                        <div class="mt-2">
-                            <img src="./assets/images/product - Copy.png" class="rounded w-100 thumbnail" alt="Thumbnail 1">
-                        </div>
-                        <div class="mt-2">
-                            <img src="./assets/images/product - Copy (2).png" class="rounded w-100 thumbnail" alt="Thumbnail 2">
-                        </div>
-                        <div class="mt-2">
-                            <img src="./assets/images/product - Copy (3).png" class="rounded w-100 thumbnail" alt="Thumbnail 3">
-                        </div>
-                        <div class="mt-2">
-                            <img src="./assets/images/product - Copy (4).png" class="rounded w-100 thumbnail" alt="Thumbnail 4">
-                        </div>
-                    </div>
-                    <img src="./assets/images/product.png" class="rounded product-image w-100 col-9" alt="product Image">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h3 class="product-title  font-weight-bold mb-3">كوع 90 باب</h3>
-                <table class="table text-center product_table" style="background-color: #FAFAFA; border-radius: 12px;">
-                    <thead>
-                        <tr>
-                            <th style="color:#E31E25;">الكمية</th>
-                            <th style="color:#E31E25;">المقاس</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>48</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>50</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>50</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>50</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>50</td>
-                            <td>2</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="btn red_border_button btn-block mt-2 rounded">تحميل الكتالوج</button>
-                <button class="btn red_button btn-block mt-2 rounded">اضف لقائمة طلب السعر</button>
-            </div>
-            </div>
-            
-            <div class="row mt-5">
-                <div class="col">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#description">الوصف</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#other-details">تفاصيل أخرى</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane container active " id="description">
-                            <p class="mt-4">لا تعد منظمات الحرارة من مارت مجرد وسيلة أكثر روعة للتحكم في درجة حرارة منزلك. تتيح لك منظمات
-                                الحرارة الذكية المعاصرة تحكمًا أكبر بكثير في درجة الحرارة والرطوبة الداخلية مقارنة بأي منظم
-                                حرارة تقليدي. سيساعدك هذا التحكم المتزايد على توفير المال الذي تنفقه على الطاقة، واستخدام
-                                نظام التدفئة والتهوية وتكييف الهواء (HVAC) بكفاءة أكبر، والعيش براحة أكبر. لا تعد منظمات
-                                الحرارة من مارت مجرد وسيلة أكثر روعة للتحكم في درجة حرارة منزلك. تتيح لك منظمات الحرارة
-                                الذكية المعاصرة تحكمًا أكبر بكثير في درجة الحرارة والرطوبة الداخلية مقارنة بأي منظم حرارة
-                                تقليدي. سيساعدك هذا التحكم المتزايد على توفير المال الذي تنفقه على الطاقة، واستخدام نظام
-                                التدفئة والتهوية وتكييف الهواء (HVAC) بكفاءة أكبر، والعيش براحة أكبر. لا تعد منظمات الحرارة
-                                من مارت مجرد وسيلة أكثر روعة للتحكم في درجة حرارة منزلك. تتيح لك منظمات الحرارة الذكية
-                                المعاصرة تحكمًا أكبر بكثير في درجة الحرارة والرطوبة الداخلية مقارنة بأي منظم حرارة تقليدي.
-                                سيساعدك هذا التحكم المتزايد على توفير المال الذي تنفقه على الطاقة، واستخدام نظام التدفئة
-                                والتهوية وتكييف الهواء (HVAC) بكفاءة أكبر، والعيش براحة أكبر.</p>
-                                <div class="row my-5">
-                                    <div class="col  border rounded p-5">
-                                        <h5 class="mb-3 font-weight-bold">المواصفات الفنية</h5>
-                                        <table class="table text-center">
-                                            <thead>
-                                                <tr>
-                                                    <th style="border: none; color:#8D8C8C;">الكود</th>
-                                                    <th style="border: none; color:#8D8C8C;">الحجم</th>
-                                                    <th style="border: none; color:#8D8C8C;">الوزن</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>12555</td>
-                                                    <td>30</td>
-                                                    <td>0.06</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>525524</td>
-                                                    <td>32</td>
-                                                    <td>0.256</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2745254</td>
-                                                    <td>33</td>
-                                                    <td>23.1</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>425242</td>
-                                                    <td>40</td>
-                                                    <td>0.03</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="tab-pane container fade " id="other-details">
-                            <p class="mt-4">هذه هي التفاصيل الأخرى التي قد تهم العميل. يمكن أن تحتوي على معلومات إضافية حول المنتج.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div> --}}
+
 
         <section id="content">
             <div class="container topic-page">
+                @if($category_image !="")
+                    @include('frontEnd.'. config('theme.THEME').'.topic.cover', ['pageTitle' => $title])
+                @endif
                 <div class="row">
                     @if ($Categories->count() > 1)
                         @include('frontEnd.layouts.side')
                     @endif
-                    <div
-                        class="col-lg-{{ $Categories->count() > 1 ? '9' : '12' }} col-md-{{ $Categories->count() > 1 ? '7' : '12' }} col-sm-12 col-xs-12">
+                    <div class="col-lg-{{ $Categories->count() > 1 ? '9' : '12' }} col-md-{{ $Categories->count() > 1 ? '7' : '12' }} col-sm-12 col-xs-12">
+
                         <article class="mb-5">
                             @if ($WebmasterSection->type == 2 && $Topic->video_file != '')
                                 {{-- video --}}
@@ -372,12 +229,12 @@
                                 <div class="post-image">
                                     @if ($WebmasterSection->title_status)
                                         <div class="post-heading">
-                                            <h1>
+                                            <h2 class="section-title">
                                                 @if ($Topic->icon != '')
                                                     <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
                                                 @endif
                                                 {{ $title }}
-                                            </h1>
+                                            </h2>
                                         </div>
                                     @endif
                                     @if ($Topic->photo_file != '')
@@ -394,7 +251,7 @@
                                 'Fields' => @$Topic->webmasterSection->customFields->where('in_page', true),
                             ])
 
-                            <div class="article-body">
+                            <div class="row narrow-row">
                                 {!! str_replace('"#', '"' . Request::url() . '#', $Topic->$details) !!}
                             </div>
 

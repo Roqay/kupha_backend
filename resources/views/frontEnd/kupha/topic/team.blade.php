@@ -38,7 +38,7 @@ if ($Team->$details_var != '') {
                     style="transition-duration: 0ms; transform: translate3d(319px, 0px, 0px); transition-delay: 0ms;">
                     @foreach ($Teams as $Topic)
                         <?php
-                        
+
                         if ($Topic->$title_var != '') {
                             $title = $Topic->$title_var;
                         } else {
@@ -53,20 +53,20 @@ if ($Team->$details_var != '') {
                         // dd($section_url);
                         $section_url = Helper::sectionURL($Topic->webmaster_id);
                         // }
-                        
+
                         $topic_link_url = Helper::topicURL($Topic->id);
                         $HomeSectionType = @$Topic->webmasterSection->type;
                         if (!@$require_mp3_player && $HomeSectionType == 3) {
                             $require_mp3_player = 1;
                         }
-                        ?> 
+                        ?>
                         <div class="swiper-slide">
                             <div class="slide_container">
                                 <img src="{{ URL::to('uploads/topics/' . $Topic->photo_file) }}" class="certificate"
                                     alt="{{ $title }}">
                             </div>
                             <h3> {{ $title }} </h3>
-                            <span> 
+                            <span>
                                 @foreach ($Team->customFields as $customField)
                                     {{ $Topic->fields->where('field_id', $customField->id)->first()['field_value'] }}
                                 @endforeach
