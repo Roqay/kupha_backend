@@ -1,7 +1,7 @@
 <?php
 $offersLimit = 0; // 0 = all
 $offers = Helper::Topics(27, 0, $offersLimit, 1);
- 
+
 ?>
 @if(count($offers)>0)
     <!-- Latest Offers Section Start -->
@@ -21,7 +21,7 @@ $offers = Helper::Topics(27, 0, $offersLimit, 1);
                         $details = $Topic->$details_var != "" ? $details_var : $details_var2;
                         $image = $Topic->photo_file != "" ? URL::to('uploads/topics/'.$Topic->photo_file) : './assets/images/offers/default.png';
                         ?>
-                        <div class="item">ddd
+                        <div class="item">
                             <img src="{{ $image }}" alt="{{ $title }}">
                         </div>
                     @endforeach

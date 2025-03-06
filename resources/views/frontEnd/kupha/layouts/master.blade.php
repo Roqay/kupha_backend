@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+@php
+
+ @Helper::currentLanguage()->direction = 'rtl';
+@endphp
 <html lang="{{ @Helper::currentLanguage()->code }}" dir="{{ @Helper::currentLanguage()->direction }}">
 
 <head>
@@ -8,7 +12,7 @@
     {{-- @include('frontEnd.kupha.layouts.colors') --}}
     @yield('headInclude')
     {{-- @stack('after-styles') --}}
-</head> 
+</head>
 <body class="home {{ @Helper::currentLanguage()->direction }} lang-{{ @Helper::currentLanguage()->code }}" >
 <!-- ======= Top Bar ======= -->
 {{-- @include('frontEnd.'. config('theme.THEME').'.layouts.topbar') --}}

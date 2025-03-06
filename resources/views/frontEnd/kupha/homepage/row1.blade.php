@@ -63,7 +63,7 @@ $TextBanners = Helper::BannersList(Helper::GeneralWebmasterSettings("home_text_b
     }
     ?>
 
- 
+
 <section class="feature-area">
     <div class="container">
         <div class="row">
@@ -85,35 +85,35 @@ $TextBanners = Helper::BannersList(Helper::GeneralWebmasterSettings("home_text_b
                         $BFile = $TextBanner->$file_var2;
                     }
                     ?>
-                     <div class="col-lg-{{$col_width}} col-md-6"> 
+                     <div class="col-lg-{{$col_width}} col-md-6">
                         <div class="single-feature">
                         <div class="icon-holder">
-                            @if($TextBanner->icon !="") 
+                            @if($TextBanner->icon !="")
                             <i class="fa {{$TextBanner->icon}} fa-2x" style="color:#15a570"></i>
                             @elseif($BFile !="")
                                 <img src="{{ URL::to('uploads/banners/'.$BFile) }}" loading="lazy"
                                      alt="{{ $BTitle }}"/>
                             @endif
-                           
+
                         </div>
                             @if($TextBanner->code !="")
                                 {!! $TextBanner->code !!}
                             @else
- 
-                                       
+
+
                                         <div class="feature-body">
                                             <h3> {!! $BTitle !!}</h3>
                                             @if($BDetails !="")
                                             <p>{!! nl2br($BDetails) !!}</p>
                                             @endif
-                                        </div> 
+                                        </div>
                                         @if($TextBanner->link_url !="")
                                             <div class="icon-link">
                                                 <img src="{{url('kupha/assets/images/features/arrow-up-left.svg')}}" alt="Feature Image 2">
-                                            </div> 
+                                            </div>
                                         @endif
 
-                            @endif 
+                            @endif
                         </div>
                     </div>
                 @endforeach
