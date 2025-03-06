@@ -73,6 +73,7 @@
 
 
     {{-- @endif --}}
+    <div class="ptb-32">
         <section id="content">
             <div class="container">
                 <div class="row">
@@ -120,6 +121,8 @@
 
                                         $topic_link_url = Helper::topicURL($Topic->id);
                                         ?>
+
+
                                         <div
                                             class="col-lg-{{$cols_lg}} col-md-{{$cols_md}}">
                                             @include("frontEnd.topic.card",["Topic"=>$Topic])
@@ -147,6 +150,7 @@
             </div>
         </section>
     </div>
+</div>
 @endsection
 @if (@in_array(@$WebmasterSection->type, [3]))
     @push('before-styles')

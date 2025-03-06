@@ -68,13 +68,41 @@
         ?>
 
 
+<div class="page-title-area">
+    <div class="container">
+        <div class="page-title-content">
+            <h2>{{ (@$search_word != "") ? __('backend.resultsFoundFor') . " [ " . @$search_word . " ]" : $page_title }}</h2>
+            <ul>
+                <li>
+                    <a href="{{ Helper::homeURL() }}">{{ __("backend.home") }}</a>
+                </li>
+                @if(@$search_word != "")
+                    <li class="active">{!! __("backend.search") !!}</li>
+                @elseif($webmaster_section_title != "")
+                    <li class="active">
+                        <a href="{{ Helper::sectionURL(@$WebmasterSection->id) }}">{!! $webmaster_section_title !!}</a>
+                    </li>
+                @elseif(@$search_word != "")
+                    <li class="active">{{ @$search_word }}</li>
+                @else
+                    <li class="active">{{ $User->name }}</li>
+                @endif
+                @if($category_title != "")
+                    <li class="active">
+                        <a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $category_title }}</a>
+                    </li>
+                @endif
 
+            </ul>
+        </div>
+    </div>
+</div>
 
 
         <section id="content">
             <div class="container topic-page">
                 @if($category_image !="")
-                    @include('frontEnd.'. config('theme.THEME').'.topic.cover', ['pageTitle' => $title])
+                    {{-- @include('frontEnd.'. config('theme.THEME').'.topic.cover', ['pageTitle' => $title]) --}}
                 @endif
                 <div class="row">
                     @if ($Categories->count() > 1)
@@ -228,7 +256,8 @@
                                 {{-- one photo --}}
                                 <div class="post-image">
                                     @if ($WebmasterSection->title_status)
-                                        <div class="post-heading">
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
                                             <h2 class="section-title">
                                                 @if ($Topic->icon != '')
                                                     <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
@@ -236,6 +265,7 @@
                                                 {{ $title }}
                                             </h2>
                                         </div>
+                                    </div>
                                     @endif
                                     @if ($Topic->photo_file != '')
                                         <img src="{{ URL::to('uploads/topics/' . $Topic->photo_file) }}" loading="lazy"
