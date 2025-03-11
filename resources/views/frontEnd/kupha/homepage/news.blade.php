@@ -16,7 +16,7 @@ $require_mp3_player = 0;
                 <span class="top-title centered">أخبارونا</span>
                 <h2 class="section-title">أخر أخبار الجمعية</h2>
                 <p class="section-sub-title">
-                    ابق علي إطلاع بأحدث الأخبار والتحديثات المتعلقة بالجمعية الطيدلية،
+                    ابق علي إطلاع بأحدث الأخبار والتحديثات المتعلقة بالجمعية الصيدلية،
                 </p>
             </div>
         </div>
@@ -29,7 +29,7 @@ $require_mp3_player = 0;
         $rowCount = 0;
     @endphp
     
-    <div class="col-lg-7 col-md-7 col-sm-12 d-flex flex-row gap-4">
+    <div class="col-lg-7 col-md-7 col-sm-12 d-flex flex-row gap-4 flex-wraper">
         @foreach($HomeTopics as $Topic)
             @if ($rowCount < 2)
                 @php
@@ -79,7 +79,7 @@ $require_mp3_player = 0;
     
     @if ($rowCount >= 2)
     <div class="col-lg-5 col-md-5 col-sm-12">
-        <ul class="recent-news">
+        <ul class="recent-news"  >
             @php
                 $listCount = 0; // عداد لبدء عرض الصفوف من الثالث
             @endphp
