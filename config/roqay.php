@@ -3,7 +3,7 @@
 return [
     'name'=>env("APP_NAME","AMR"),
     'backend_path' => env('BACKEND_PATH', 'admin'),
-    'default_language' => env('DEFAULT_LANGUAGE', 'en'),
+    'default_language' => env('DEFAULT_LANGUAGE', 'ar'),
     'mail_from_address' => env('MAIL_FROM_ADDRESS', 'email@site.com'),
     'mail_username' => env('MAIL_USERNAME', ''),
     'mail_password' => env('MAIL_PASSWORD', ''),

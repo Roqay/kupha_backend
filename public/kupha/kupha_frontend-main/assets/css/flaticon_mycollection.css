@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "flaticon_mycollection";
+    src: url("../fonts/flaticon_mycollection.ttf?0ad9ffa0fdab73336588b6e6f948436e") format("truetype"),
+url("../fonts/flaticon_mycollection.woff?0ad9ffa0fdab73336588b6e6f948436e") format("woff"),
+url("../fonts/flaticon_mycollection.woff2?0ad9ffa0fdab73336588b6e6f948436e") format("woff2"),
+url("../fonts/flaticon_mycollection.eot?0ad9ffa0fdab73336588b6e6f948436e#iefix") format("embedded-opentype"),
+url("../fonts/flaticon_mycollection.svg?0ad9ffa0fdab73336588b6e6f948436e#flaticon_mycollection") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_mycollection !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-001-heart:before {
+    content: "\f101";
+}
+.flaticon-002-charity:before {
+    content: "\f102";
+}
+.flaticon-003-donate:before {
+    content: "\f103";
+}
+.flaticon-004-donation:before {
+    content: "\f104";
+}
+.flaticon-005-homeless:before {
+    content: "\f105";
+}
+.flaticon-006-homeless-1:before {
+    content: "\f106";
+}
+.flaticon-007-zakat:before {
+    content: "\f107";
+}
+.flaticon-008-zakat-1:before {
+    content: "\f108";
+}
+.flaticon-009-gift-box:before {
+    content: "\f109";
+}
+.flaticon-010-gift-card:before {
+    content: "\f10a";
+}
+.flaticon-011-gift-card-1:before {
+    content: "\f10b";
+}
+.flaticon-012-perspective:before {
+    content: "\f10c";
+}
+.flaticon-013-project:before {
+    content: "\f10d";
+}
+.flaticon-014-nabawi-mosque:before {
+    content: "\f10e";
+}

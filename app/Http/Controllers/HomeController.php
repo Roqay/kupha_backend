@@ -42,7 +42,7 @@ class HomeController extends Controller
 
     private function set_language($lang): void
     {
-        $lang = 'ar';
+        // $lang = 'ar';
         App::setLocale($lang);
         session(['locale' => $lang]);
     }
