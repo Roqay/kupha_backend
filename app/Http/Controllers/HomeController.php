@@ -331,13 +331,14 @@ class HomeController extends Controller
             }
 
             $statics = [];
-
             // return view
             $view = "topics";
             if ($WebmasterSection->type == 8) {
                 $view = "faq";
             } elseif ($WebmasterSection->type == 7) {
                 $view = "search";
+            }elseif ($WebmasterSection->row_no == 27) {
+                    $view = "member_ships";
             } elseif ($WebmasterSection->type == 5) {
                 $view = "table";
                 // statics

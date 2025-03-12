@@ -10,7 +10,7 @@
                                  src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}"  width="100%" height="100%"
                                  alt="{{ $title }}" loading="lazy"/>
                         @else
-                            <?php
+                            <?php 
                             $img_url = "";
                             ?>
                             @if($Topic->video_type ==1)
