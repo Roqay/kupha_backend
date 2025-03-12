@@ -38,7 +38,7 @@ return [
     'bitbucket_status' => env('BITBUCKET_STATUS', false),
     'bitbucket_id' => env('BITBUCKET_ID', ""),
     'bitbucket_secret' => env('BITBUCKET_SECRET', ""),
-    'google_maps_key' => env('GOOGLE_MAPS_KEY', ""),
+    'google_maps_key' => env('GOOGLE_MAPS_KEY', "true"),
     'first_day_of_week' => env('FIRST_DAY_OF_WEEK', 0),
     'microsoft_id' => env('MICROSOFT_ID', ""),
     'microsoft_secret' => env('MICROSOFT_SECRET', ""),

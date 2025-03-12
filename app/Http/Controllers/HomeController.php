@@ -525,7 +525,7 @@ class HomeController extends Controller
         $validation = [
             'contact_name' => 'required',
             'contact_email' => 'required|email',
-            'contact_subject' => 'required',
+            // 'contact_subject' => 'nullable|required',
             'contact_message' => 'required'
         ];
         if (config('roqay.nocaptcha_status')) {

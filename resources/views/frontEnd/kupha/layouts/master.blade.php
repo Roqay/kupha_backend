@@ -29,7 +29,7 @@
 <!-- ======= JS Including ======= -->
 @stack('before-scripts')
 @include('frontEnd.'. config('theme.THEME').'.layouts.foot')
-{{-- @yield('footInclude') --}}
-{{-- @stack('after-scripts') --}}
+@yield('footInclude')
+@stack('after-scripts')
 </body>
 </html>
