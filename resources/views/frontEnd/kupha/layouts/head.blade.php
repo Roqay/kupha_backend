@@ -6,10 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-
-
-
-
 <link rel="icon" href="{{ URL::asset('kupha/assets/images/favicon.ico')}}" type="image/x-icon">
 {{-- @if( @Helper::currentLanguage()->direction=="rtl") --}}
 <link rel="stylesheet" href="{{ asset('kupha/assets/css/bootstrap.rtl.min.css') }}">

@@ -4,13 +4,12 @@
     {{-- <div class="home-page"> --}}
         <?php
         $title_var = "title_" . @Helper::currentLanguage()->code;
-        $title_var2 = "title_" . config('prosys.default_language');
+        $title_var2 = "title_" . config('roqay.default_language');
         $details_var = "details_" . @Helper::currentLanguage()->code;
-        $details_var2 = "details_" . config('prosys.default_language');
+        $details_var2 = "details_" . config('roqay.default_language');
         ?>
-
-@include('frontEnd.'. config('theme.THEME').'.layouts.slider') 
-@include('frontEnd.'. config('theme.THEME').'.homepage.row1')  
+@include('frontEnd.'. config('theme.THEME').'.layouts.slider')
+@include('frontEnd.'. config('theme.THEME').'.homepage.row1')
 @include('frontEnd.'. config('theme.THEME').'.homepage.row2')
 @include('frontEnd.'. config('theme.THEME').'.homepage.row3')
 @include('frontEnd.'. config('theme.THEME').'.homepage.row4')

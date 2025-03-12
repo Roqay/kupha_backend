@@ -50,7 +50,7 @@ $TextBanners = Helper::BannersList(Helper::GeneralWebmasterSettings("home_text_b
     $details_var2 = "details_" . config('prosys.default_language');
     $file_var = "file_" . @Helper::currentLanguage()->code;
     $file_var2 = "file_" . config('prosys.default_language');
-
+ 
     $col_width = 12;
     if (count($TextBanners) == 2) {
         $col_width = 6;

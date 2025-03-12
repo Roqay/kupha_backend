@@ -7,11 +7,11 @@ $MenuLinks = \App\Helpers\SiteMenu::List(Helper::GeneralWebmasterSettings("heade
  
 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" style="display: block;">
     <ul class="navbar-nav m-auto">
-        @foreach($MenuLinks as $MenuLink)  
+        @foreach($MenuLinks as $MenuLink)
         <li class="nav-item {{ (@$MenuLink->sub)?"dropdown":"" }}  ">
-            <a class="nav-link {{ \App\Helpers\SiteMenu::ActiveLink(url()->current(),@$MenuLink,@$WebmasterSection) }}  {{ (@$MenuLink->sub)?"dropdown-toggle":"" }}  
-                 {{ Request::url() == $MenuLink->url ? 'selected-nav' : '' }}"
-                 href="{{ @$MenuLink->url }}" id="navbarDropdown" role="button"
+            <a class="nav-link {{ \App\Helpers\SiteMenu::ActiveLink(url()->current(),@$MenuLink,@$WebmasterSection) }}  {{ (@$MenuLink->sub)?"dropdown-toggle":"" }}
+                                 {{ Request::url() == $MenuLink->url ? 'selected-nav' : '' }}"
+                 href="{{ @$MenuLink->url }}" id="navbarDropdown"
                  {{(@$MenuLink->sub)? "data-toggle=dropdown"  : ""}}  aria-haspopup="true" aria-expanded="false">
              {{-- {!! (@$MenuLink->icon)?"<i class='".@$MenuLink->icon."'></i> ":"" !!} --}}
               {{ @$MenuLink->title }}

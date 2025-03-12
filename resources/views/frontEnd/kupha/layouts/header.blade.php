@@ -39,7 +39,7 @@
         <div class="container">
             <div class="mobile-responsive-menu">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{{url('/')}}">
                         {{-- <img src="assets/images/logo.svg" alt="logo"> --}}
                         @if(Helper::GeneralSiteSettings("style_logo_" . @Helper::currentLanguage()->code) !="")
                             <img alt="{{ Helper::GeneralSiteSettings("site_title_" . @Helper::currentLanguage()->code) }}"
@@ -57,7 +57,7 @@
     <div class="desktop-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{url('/')}}">
                     {{-- <img src="kupha/assets/images/logo.svg" alt="logo"> --}}
                     @if(Helper::GeneralSiteSettings("style_logo_" . @Helper::currentLanguage()->code) !="")
                             <img alt="{{ Helper::GeneralSiteSettings("site_title_" . @Helper::currentLanguage()->code) }}"

@@ -170,6 +170,10 @@ class HomeController extends Controller
         return $this->page_404();
     }
 
+    public function member_ship($lang = "") {
+        $this->set_language($lang);
+        return view('frontEnd.kupha.member_ship' , []);
+    }
 
     public function about_page($lang = "")
     {

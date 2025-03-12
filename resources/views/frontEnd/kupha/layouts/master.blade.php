@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-@php
-
- @Helper::currentLanguage()->direction = 'rtl';
-@endphp
 <html lang="{{ @Helper::currentLanguage()->code }}" dir="{{ @Helper::currentLanguage()->direction }}">
 
 <head>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\SocialAuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\SiteMapController;
+use App\Http\Controllers\MembershipApplicationController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -68,6 +69,11 @@ Route::post('/contact-submit', [HomeController::class, 'contact_submit'])->name(
 // - Contact page ( www.site.com/contact )
 Route::get('/contact', [HomeController::class, 'contact_page'])->name('contactPage');
 Route::get('/{lang?}/contact', [HomeController::class, 'contact_page'])->name('contactPageByLang');
+
+Route::get('/{lang?}/member-ship', [HomeController::class, 'member_ship'])->name('member_ship');
+
+
+Route::post('/membership/store', [MembershipApplicationController::class, 'store'])->name('membership.store');
 
 // - All Other slugs
 Route::get('/{part1?}/{part2?}/{part3?}/{part4?}/{part5?}/{part6?}', [HomeController::class, 'seo'])->name("frontendRoute");
