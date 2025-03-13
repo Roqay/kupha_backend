@@ -55,6 +55,11 @@
                                     <h5 class="mt-3 text-muted">{{ __('frontend.noData') }}</h5>
                                 </div>
                             @else
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+                                    <h2 class="section-title">{{$webmaster_section_title }}</h2>
+                                </div>
+                            </div>
                                 <div class="row">
                                     @foreach($Topics as $Topic)
                                         <div class="col-lg-{{ count($Categories) > 0 ? '6' : '4' }} col-md-{{ count($Categories) > 0 ? '12' : '6' }}">
