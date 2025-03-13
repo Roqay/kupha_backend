@@ -30,7 +30,7 @@ $offers = Helper::Topics(27, 0, $offersLimit, 1);
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="read-more-btns">
-                        <a href="about.html" class="secondary-btn">عرض المزيد</a>
+                        <a href="  {{Helper::sectionURL(27)}}" class="secondary-btn">عرض المزيد</a>
                     </div>
                 </div>
             </div>
