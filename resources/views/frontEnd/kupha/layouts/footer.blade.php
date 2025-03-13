@@ -26,7 +26,10 @@
                 </div>
                 <div class="hours-content">
                     <h3>ساعات العمل الرسمية</h3>
-                    <p>الأحد - الخميس 09:00 - 13:00</p>
+                    <p>
+                        الأحد : الخميس:  9:00 صباحًا إلى 12:00 ظهرًا  <br>
+                        السبت : الخميس:  6:00 مساءً إلى 9:00 مساءً
+                    </p>
                 </div>
             </div>
 
@@ -121,7 +124,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.tiktok.com/" target="_blank">
+                                <a href="https://www.tiktok.com/kupha_1974" target="_blank">
                                     <img src="{{ asset('assets/website/images/icons/tik.svg') }}" alt="TikTok">
                                 </a>
                             </li>
