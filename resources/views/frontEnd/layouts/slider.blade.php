@@ -68,7 +68,7 @@ $SliderBanners = Helper::BannersList(Helper::GeneralWebmasterSettings("home_bann
                                     <div class="carousel-content container">
                                         <div class="slider-content">
                                             @if($BDetails !="" || $SliderBanner->link_url!="")
-                                                @if($BTitle !="" or $BTitle !=".")
+                                                @if($BTitle !="" and count($BTitle) > 2)
                                                     <h2 class="animate__animated animate__fadeInDown slider-title">{!! $BTitle !!}</h2>
                                                 @endif
 
