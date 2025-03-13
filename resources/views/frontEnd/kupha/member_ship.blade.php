@@ -4,14 +4,14 @@
     <div class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>{{ @$search_word != '' ? __('backend.resultsFoundFor') . ' [ ' . @$search_word . ' ]' : $title ?? 'no ...' }}
+                <h2>{{ @$search_word != '' ? __('backend.resultsFoundFor') . ' [ ' . @$search_word . ' ]' : $title ?? '' }}
                 </h2>
                 <ul>
                     <li>
                         <a href="{{ Helper::homeURL() }}">{{ __('backend.home') }}</a>
                     </li>
                     <li class="active">
-                        <a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $title ?? 'no ..' }}</a>
+                        <a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $title ?? '' }}</a>
                     </li>
                 </ul>
             </div>
