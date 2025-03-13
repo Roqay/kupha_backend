@@ -27,7 +27,7 @@ $SliderBanners = Helper::BannersList(Helper::GeneralWebmasterSettings("home_bann
                 @if($BFilePath)
                     <div class="hero-slider-item bg-banner" style="background-image: url('{{ $BFilePath }}');">
                         <div class="hero-slider-content">
-                            @if($BTitle and count($BTitle) > 2)
+                            @if(!empty($BTitle) && mb_strlen($BTitle) > 2)
                                 <h1>{{ $BTitle }}</h1>
                             @endif
                         </div>
