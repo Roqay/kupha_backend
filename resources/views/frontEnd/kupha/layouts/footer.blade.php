@@ -104,22 +104,22 @@
                     <div class="social-media">
                         <ul class="footer-social">
                             <li>
-                                <a href="https://www.facebook.com/" target="_blank">
+                                <a href="{{Helper::GeneralSiteSettings('social_link1')}}" target="_blank">
                                     <img src="{{ asset('assets/website/images/icons/face.svg') }}" alt="Facebook">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.whatsapp.com/" target="_blank">
+                                <a href="{{Helper::GeneralSiteSettings('social_link10')}}" target="_blank">
                                     <img src="{{ asset('assets/website/images/icons/whats.svg') }}" alt="WhatsApp">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/" target="_blank">
+                                <a href="{{Helper::GeneralSiteSettings('social_link5')}}" target="_blank">
                                     <img src="{{ asset('assets/website/images/icons/insta.svg') }}" alt="Instagram">
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/" target="_blank">
+                                <a href="{{Helper::GeneralSiteSettings('social_link2')}}" target="_blank">
                                     <img src="{{ asset('assets/website/images/icons/x.svg') }}" alt="LinkedIn">
                                 </a>
                             </li>

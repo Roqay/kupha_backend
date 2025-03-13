@@ -126,7 +126,7 @@ if (!Helper::GeneralSiteSettings("style_subscribe")) {
                     . <a href="#">{{Helper::GeneralSiteSettings($site_title_var)}}</a>
                 </div>
                 <div class="credits">
-                    Powered by <a href="https://roqay.app">roqay</a>
+                    Powered by <a href="https://brosys.tech">Brosys</a>
                 </div>
             </div>
             @include("frontEnd.layouts.social",["tt_position"=>"top"])

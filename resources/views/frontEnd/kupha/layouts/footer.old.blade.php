@@ -130,7 +130,7 @@ if (!Helper::GeneralSiteSettings("style_subscribe")) {
             . <a href="#">{{Helper::GeneralSiteSettings($site_title_var)}}</a>
         </div>
     </div>
- 
+
 </footer>
 
 @if(Helper::GeneralSiteSettings('social_link10'))
@@ -355,17 +355,17 @@ if (!Helper::GeneralSiteSettings("style_subscribe")) {
             <a href="#" class="d-inline">
                 <i class="far fa-facebook"></i>
             </a>
-            <a href="#" class="d-inline">
-                <i class="far fa-linkedin"></i>
+            <a href="{{Helper::GeneralSiteSettings('social_link5')}}" class="d-inline">
+                <i class="far fa-youtube"></i>
             </a>
-            <a href="#" class="d-inline">
+            <a href="{{Helper::GeneralSiteSettings('social_link3')}}" class="d-inline">
                 <i class="far fa-twitter"></i>
             </a>
-            <a href="#" class="d-inline">
+            <a href="{{Helper::GeneralSiteSettings('social_link6')}}" class="d-inline">
                 <i class="far fa-instagram"></i>
             </a>
         </div>
-        <div> جميع الحقوق محفوظة لدي <span style="color:#E31E25">بيلا سيتي</span> 2024 ©</div>
+        <div> جميع الحقوق محفوظة لدي <span style="color:#E31E25"Brosys</span> 2025 ©</div>
     </div>
 </footer>
 @if(Helper::GeneralSiteSettings('social_link10'))
