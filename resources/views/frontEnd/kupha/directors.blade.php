@@ -34,8 +34,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                    <span class="top-title">{{ __('messages.about_us') }}</span>
-                    <h2 class="section-title">{{ __('messages.board_of_directors') }}</h2>
+                    <span class="top-title">من نحن</span>
+                    <h2 class="section-title">مجلس الإدراة</h2>
                 </div>
             </div>
             <div class="row narrow-row">
@@ -54,8 +54,9 @@
                                 <span class="position">{{ $position }}</span>
                             </div>
                             <div class="mail">{{ $email }}</div>
+
                             <div class="send-mgs">
-                                <a href="mailto:{{ $email }}"><img src="./assets/images/team/msg.svg" alt=""></a>
+                                <a href="mailto:{{ $email }}"><img src="{{asset("kupha/assets/images/team/msg.svg")}}" alt=""></a>
                             </div>
                         </div>
                     </div>
