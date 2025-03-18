@@ -170,6 +170,7 @@ class HomeController extends Controller
         return $this->page_404();
     }
 
+
     public function member_ship($lang = "") {
         $this->set_language($lang);
         return view('frontEnd.kupha.member_ship' , []);
@@ -329,7 +330,6 @@ class HomeController extends Controller
                 // Get Most Viewed Topics
                 $MostViewedTopics = $MostViewedTopics->orderby('visits', 'desc')->limit(3)->get();
             }
-
             $statics = [];
             // return view
             $view = "topics";
@@ -339,6 +339,8 @@ class HomeController extends Controller
                 $view = "search";
             }elseif ($WebmasterSection->row_no == 27) {
                     $view = "member_ships";
+            }elseif ($WebmasterSection->id == 29) {
+                    $view = "directors";
             } elseif ($WebmasterSection->type == 5) {
                 $view = "table";
                 // statics

@@ -71,6 +71,7 @@ Route::get('/contact', [HomeController::class, 'contact_page'])->name('contactPa
 Route::get('/{lang?}/contact', [HomeController::class, 'contact_page'])->name('contactPageByLang');
 
 Route::get('/{lang?}/member-ship', [HomeController::class, 'member_ship'])->name('member_ship');
+// Route::get('/{lang?}/directors', [HomeController::class, 'member_ship'])->name('member_ship');
 
 // team-members
 Route::post('/membership/store', [MembershipApplicationController::class, 'store'])->name('membership.store');
