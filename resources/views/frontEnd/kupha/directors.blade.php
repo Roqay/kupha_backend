@@ -7,7 +7,7 @@
     $title_var2 = 'title_' . config('prosys.default_language');
     $details_var = 'details_' . @Helper::currentLanguage()->code;
     $details_var2 = 'details_' . config('prosys.default_language');
-
+    $title = 'مجلس الإدراة';
 @endphp
 @section('content')
     <div class="page-title-area">

@@ -1,12 +1,12 @@
-<?php 
+<?php
 $HomeTopicsLimit = 6; // 0 = all
 $HomeTopics = Helper::Topics(3, 0, $HomeTopicsLimit);
-$require_mp3_player = 0; 
+$require_mp3_player = 0;
 
 ?>
 @if(count($HomeTopics)>0)
 
- 
+
 
 
 <section class="news-area ptb-32">
@@ -20,15 +20,15 @@ $require_mp3_player = 0;
                 </p>
             </div>
         </div>
-    <div class="row ptb-32"> 
+    <div class="row ptb-32">
             @php
             $rowCount = 0; // متغير لحساب الصفوف
         @endphp
-        
+
         @php
         $rowCount = 0;
     @endphp
-    
+
     <div class="col-lg-7 col-md-7 col-sm-12 d-flex flex-row gap-4 flex-wraper">
         @foreach($HomeTopics as $Topic)
             @if ($rowCount < 2)
@@ -38,22 +38,22 @@ $require_mp3_player = 0;
                     } else {
                         $title = $Topic->$title_var2;
                     }
-    
+
                     if ($Topic->$details_var != "") {
                         $details = $Topic->$details_var;
                     } else {
                         $details = $Topic->$details_var2;
                     }
-    
+
                     $section_url = Helper::sectionURL($Topic->webmaster_id);
                     $topic_link_url = Helper::topicURL($Topic->id);
                     $HomeSectionType = @$Topic->webmasterSection->type;
-    
+
                     if (!@$require_mp3_player && $HomeSectionType == 3) {
                         $require_mp3_player = 1;
                     }
                 @endphp
-    
+
                 <div class="col-lg-6 col-md-6 col-sm-12 news-item-block">
                     <div class="banner-holder">
                         <img src="{{ URL::to('uploads/topics/'.$Topic->photo_file) }}" alt="{{ $title }}">
@@ -76,7 +76,7 @@ $require_mp3_player = 0;
             @endif
         @endforeach
     </div>
-    
+
     @if ($rowCount >= 2)
     <div class="col-lg-5 col-md-5 col-sm-12">
         <ul class="recent-news"  >
@@ -91,11 +91,11 @@ $require_mp3_player = 0;
                         } else {
                             $title = $Topic->$title_var2;
                         }
-    
+
                         $section_url = Helper::sectionURL($Topic->webmaster_id);
                         $topic_link_url = Helper::topicURL($Topic->id);
                     @endphp
-    
+
                     <li>
                         <a href="{{ url($topic_link_url) }}">
                             <div class="news-img">
@@ -115,10 +115,10 @@ $require_mp3_player = 0;
         </ul>
     </div>
     @endif
-    
-        
-    </div> 
-   
+
+
+    </div>
+
     </div>
 </div>
 @endif

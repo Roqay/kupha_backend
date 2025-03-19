@@ -13,11 +13,8 @@
     : (optional($CurrentCategory)->photo
         ? URL::to('uploads/sections/' . $CurrentCategory->photo)
         : '');
-        $title_var = 'title_' . @Helper::currentLanguage()->code;
-        $title_var2 = 'title_' . config('prosys.default_language');
         $details_var = 'details_' . @Helper::currentLanguage()->code;
         $details_var2 = 'details_' . config('prosys.default_language');
-
         ?>
 
         <div class="page-title-area">
@@ -41,10 +38,12 @@
             </div>
         </div>
 
+
         <div class="ptb-32">
             <section id="content">
                 <div class="container">
                     <div class="row">
+
                         @if(@count($Categories) > 1)
                             @include('frontEnd.layouts.side')
                         @endif
@@ -57,7 +56,13 @@
                             @else
                             <div class="row">
                                 <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                                    <h2 class="section-title">{{$webmaster_section_title }}</h2>
+                                    <span class="top-title">{{$webmaster_section_title ??   ""}}</span>
+                                    {{-- <h2>{{$category_title ?? $webmaster_section_title ?? $title ?? ""}}</h2> --}}
+                                    <h2 >
+                                        @if ($WebmasterSection->row_no == 4)
+                                            أخبار الجمعية
+                                        @endif
+                                    </h2>
                                 </div>
                             </div>
                                 <div class="row">

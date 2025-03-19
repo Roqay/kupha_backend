@@ -31,13 +31,7 @@
 
 {{-- {{dd($Topic->maps)}} --}}
 
-        <div class=" pt-5" style="background-color: #fafafa;">
-            <div class="container about_header">
-                <span><a href="{{ Helper::homeURL() }}">{{ __('backend.home') }}</a></span>
-                <span>/</span>
-                <span>{{ $title }}</span>
-            </div>
-        </div>
+
 
         <div class="page-title-area">
             <div class="container">
@@ -61,7 +55,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <span class="top-title">{{ __('frontend.getInTouch') }}</span>
+                    <span class="top-title">تواصل معنا</span>
                     <h2>سيقوم موظفو الدعم بالإجابة على أسئلتك!</h2>
                     <div class="support-form-holder">
                         {{ Form::open(['route' => ['contactPageSubmit'], 'method' => 'POST', 'class' => 'php-email-form', 'id' => 'contactForm']) }}
