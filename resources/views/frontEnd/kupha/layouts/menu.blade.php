@@ -37,24 +37,24 @@ $MenuLinks = \App\Helpers\SiteMenu::List(Helper::GeneralWebmasterSettings("heade
     <div class="others-options">
         <ul>
            <?php   ?>
-          <li>
+          {{-- <li>
                <div class="navbar-option-item navbar-option-language dropdown language-option">
                    <button class="dropdown-toggle" type="button" id="language1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="lang-name">
+                        <span class="lang-name"> --}}
 
-                            English
-                        </span>
-                    </button>
-                    <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language1">
-                        @foreach(Helper::languagesList() as $ActiveLanguage)
-                        <a class="dropdown-item" href="{{ Helper::languageURL($ActiveLanguage->code, @$page_type , @$page_id) }}">
+                            {{-- English --}}
+                        {{-- </span> --}}
+                    {{-- </button> --}}
+                    {{-- <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language1"> --}}
+                        {{-- @foreach(Helper::languagesList() as $ActiveLanguage) --}}
+                        {{-- <a class="dropdown-item" href="{{ Helper::languageURL($ActiveLanguage->code, @$page_type , @$page_id) }}"> --}}
                             {{-- <img src="assets/images/language/english.png" alt="Image"> --}}
-                            {{ $ActiveLanguage->title }}
+                            {{-- {{ $ActiveLanguage->title }}
                         </a>
                         @endforeach
                     </div>
                 </div>
-            </li>
+            </li> --}}
 
             {{-- <li>
                 <a class="primary-btn" href="{{url('admin/home')}}">

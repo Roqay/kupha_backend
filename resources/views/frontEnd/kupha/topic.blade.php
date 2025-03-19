@@ -1,7 +1,7 @@
-@extends('frontEnd.'. config('theme.THEME').'.layouts.master')
+@extends('frontEnd.' . config('theme.THEME') . '.layouts.master')
 @section('content')
     <div>
-    <?php
+        <?php
         $title_var = 'title_' . @Helper::currentLanguage()->code;
         $title_var2 = 'title_' . config('prosys.default_language');
         $details_var = 'details_' . @Helper::currentLanguage()->code;
@@ -67,26 +67,29 @@
         ?>
 
 
-<div class="page-title-area">
-    <div class="container">
-        <div class="page-title-content">
-            <h2>{{ @$search_word ? __('backend.resultsFoundFor') . " [ " . @$search_word . " ]" : $page_title }}</h2>
-            <ul>
-                <li><a href="{{ Helper::homeURL() }}">{{ __('backend.home') }}</a></li>
-                @if(@$search_word)
-                    <li class="active">{!! __('backend.search') !!}</li>
-                @elseif($webmaster_section_title)
-                    <li class="active"><a href="{{ Helper::sectionURL(@$WebmasterSection->id) }}">{!! $webmaster_section_title !!}</a></li>
-                @else
-                    <li class="active">{{ optional($User)->name }}</li>
-                @endif
-                @if($category_title)
-                    <li class="active"><a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $category_title }}</a></li>
-                @endif
-            </ul>
+        <div class="page-title-area">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>{{ @$search_word ? __('backend.resultsFoundFor') . ' [ ' . @$search_word . ' ]' : $page_title }}
+                    </h2>
+                    <ul>
+                        <li><a href="{{ Helper::homeURL() }}">{{ __('backend.home') }}</a></li>
+                        @if (@$search_word)
+                            <li class="active">{!! __('backend.search') !!}</li>
+                        @elseif($webmaster_section_title)
+                            <li class="active"><a
+                                    href="{{ Helper::sectionURL(@$WebmasterSection->id) }}">{!! $webmaster_section_title !!}</a></li>
+                        @else
+                            <li class="active">{{ optional($User)->name }}</li>
+                        @endif
+                        @if ($category_title)
+                            <li class="active"><a
+                                    href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $category_title }}</a></li>
+                        @endif
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
         <section id="content" class="contact-area ptb-48">
 
@@ -142,7 +145,8 @@
                                             @endif
                                         @else
                                             <video class="video-js" controls autoplay preload="auto" width="100%"
-                                                height="500" poster="{{ URL::to('uploads/topics/' . $Topic->photo_file) }}"
+                                                height="500"
+                                                poster="{{ URL::to('uploads/topics/' . $Topic->photo_file) }}"
                                                 data-setup="{}">
                                                 <source src="{{ URL::to('uploads/topics/' . $Topic->video_file) }}"
                                                     type="video/mp4" />
@@ -190,10 +194,12 @@
                                     @if ($WebmasterSection->title_status)
                                         <div class="row">
                                             <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                                                <span class="top-title"> {{$webmaster_section_title ??   "اكتشف أحدث المواضيع والمحتوى المميز"}}   </span>
+                                                <span class="top-title">
+                                                    {{ $webmaster_section_title ?? 'اكتشف أحدث المواضيع والمحتوى المميز' }}
+                                                </span>
 
                                                 <h2>
-                                                    {{ $title }}                        </h2>
+                                                    {{ $title }} </h2>
                                             </div>
                                         </div>
                                     @endif
