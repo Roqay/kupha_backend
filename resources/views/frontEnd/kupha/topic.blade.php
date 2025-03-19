@@ -258,15 +258,20 @@
                                     @if ($WebmasterSection->title_status)
                                     <div class="row">
                                         <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                                            <h2 class="section-title">
-                                                @if ($Topic->icon != '')
-                                                    <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
-                                                @endif
-                                                {{ $title }}
+                                            <span class="top-title">التفاصيل </span>
+                                            <h2 >
+                                                {{$webmaster_section_title ??   ""}}
                                             </h2>
                                         </div>
                                     </div>
                                     @endif
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+                                            <span class="top-title">{{$webmaster_section_title ??   ""}}</span>
+                                            {{-- <h2>{{$category_title ?? $webmaster_section_title ?? $title ?? ""}}</h2> --}}
+
+                                        </div>
+                                    </div>
                                     @if ($Topic->photo_file != '')
                                         <img src="{{ URL::to('uploads/topics/' . $Topic->photo_file) }}" loading="lazy"
                                             alt="{{ $title }}" title="{{ $title }}"
