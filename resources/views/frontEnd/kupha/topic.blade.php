@@ -1,8 +1,7 @@
 @extends('frontEnd.'. config('theme.THEME').'.layouts.master')
 @section('content')
-
     <div>
-        <?php
+    <?php
         $title_var = 'title_' . @Helper::currentLanguage()->code;
         $title_var2 = 'title_' . config('prosys.default_language');
         $details_var = 'details_' . @Helper::currentLanguage()->code;
@@ -71,46 +70,36 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>{{ (@$search_word != "") ? __('backend.resultsFoundFor') . " [ " . @$search_word . " ]" : $page_title }}</h2>
+            <h2>{{ @$search_word ? __('backend.resultsFoundFor') . " [ " . @$search_word . " ]" : $page_title }}</h2>
             <ul>
-                <li>
-                    <a href="{{ Helper::homeURL() }}">{{ __("backend.home") }}</a>
-                </li>
-                @if(@$search_word != "")
-                    <li class="active">{!! __("backend.search") !!}</li>
-                @elseif($webmaster_section_title != "")
-                    <li class="active">
-                        <a href="{{ Helper::sectionURL(@$WebmasterSection->id) }}">{!! $webmaster_section_title !!}</a>
-                    </li>
-                @elseif(@$search_word != "")
-                    <li class="active">{{ @$search_word }}</li>
+                <li><a href="{{ Helper::homeURL() }}">{{ __('backend.home') }}</a></li>
+                @if(@$search_word)
+                    <li class="active">{!! __('backend.search') !!}</li>
+                @elseif($webmaster_section_title)
+                    <li class="active"><a href="{{ Helper::sectionURL(@$WebmasterSection->id) }}">{!! $webmaster_section_title !!}</a></li>
                 @else
-                    <li class="active">{{ $User->name }}</li>
+                    <li class="active">{{ optional($User)->name }}</li>
                 @endif
-                @if($category_title != "")
-                    <li class="active">
-                        <a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $category_title }}</a>
-                    </li>
+                @if($category_title)
+                    <li class="active"><a href="{{ Helper::categoryURL(@$CurrentCategory->id) }}">{{ $category_title }}</a></li>
                 @endif
-
             </ul>
         </div>
     </div>
 </div>
 
+        <section id="content" class="contact-area ptb-48">
 
-        <section id="content">
             <div class="container topic-page">
-                @if($category_image !="")
-                    {{-- @include('frontEnd.'. config('theme.THEME').'.topic.cover', ['pageTitle' => $title]) --}}
-                @endif
+
                 <div class="row">
                     @if ($Categories->count() > 1)
                         @include('frontEnd.layouts.side')
                     @endif
-                    <div class="col-lg-{{ $Categories->count() > 1 ? '9' : '12' }} col-md-{{ $Categories->count() > 1 ? '7' : '12' }} col-sm-12 col-xs-12">
-
+                    <div
+                        class="col-lg-{{ $Categories->count() > 1 ? '9' : '12' }} col-md-{{ $Categories->count() > 1 ? '7' : '12' }} col-sm-12 col-xs-12">
                         <article class="mb-5">
+
                             @if ($WebmasterSection->type == 2 && $Topic->video_file != '')
                                 {{-- video --}}
                                 <div class="post-video">
@@ -199,13 +188,13 @@
                                 {{-- photo slider --}}
                                 <div>
                                     @if ($WebmasterSection->title_status)
-                                        <div class="post-heading">
-                                            <h1>
-                                                @if ($Topic->icon != '')
-                                                    <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
-                                                @endif
-                                                {{ $title }}
-                                            </h1>
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+                                                <span class="top-title"> {{$webmaster_section_title ??   "اكتشف أحدث المواضيع والمحتوى المميز"}}   </span>
+
+                                                <h2>
+                                                    {{ $title }}                        </h2>
+                                            </div>
                                         </div>
                                     @endif
 
@@ -256,22 +245,15 @@
                                 {{-- one photo --}}
                                 <div class="post-image">
                                     @if ($WebmasterSection->title_status)
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                                            <span class="top-title">{{$webmaster_section_title ??   ""}} </span>
-                                            <h2 >
-                                                {{$page_title ?? ''}}
-                                            </h2>
+                                        <div class="post-heading">
+                                            <h1>
+                                                @if ($Topic->icon != '')
+                                                    <i class="fa {!! $Topic->icon !!} "></i>&nbsp;
+                                                @endif
+                                                {{ $title }}
+                                            </h1>
                                         </div>
-                                    </div>
                                     @endif
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                                            <span class="top-title">{{$webmaster_section_title ??   ""}}</span>
-                                            {{-- <h2>{{$category_title ?? $webmaster_section_title ?? $title ?? ""}}</h2> --}}
-
-                                        </div>
-                                    </div>
                                     @if ($Topic->photo_file != '')
                                         <img src="{{ URL::to('uploads/topics/' . $Topic->photo_file) }}" loading="lazy"
                                             alt="{{ $title }}" title="{{ $title }}"
@@ -286,7 +268,7 @@
                                 'Fields' => @$Topic->webmasterSection->customFields->where('in_page', true),
                             ])
 
-                            <div class="row narrow-row">
+                            <div class="article-body">
                                 {!! str_replace('"#', '"' . Request::url() . '#', $Topic->$details) !!}
                             </div>
 
@@ -313,7 +295,7 @@
                                     class="fa-solid fa-reply"></i> {{ __('backend.clickToNewSearch') }}
                             </a>
                         @else
-                            @include('frontEnd.topic.share')
+                            {{-- @include('frontEnd.topic.share') --}}
                         @endif
 
                         @include('frontEnd.topic.comments')
