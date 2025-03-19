@@ -36,7 +36,7 @@ if (!Helper::GeneralSiteSettings("style_subscribe")) {
                                 <i class="bi bi-telephone"></i> &nbsp;<a
                                     href="tel:{{ Helper::GeneralSiteSettings("contact_t3") }}"><span
                                         dir="ltr">{{ Helper::GeneralSiteSettings("contact_t3") }}</span></a></p>
-                        @endif
+                        @endif 
                         @if(Helper::GeneralSiteSettings("contact_t6") !="")
                             <p>
                                 <strong>{{ __('frontend.email') }}</strong><br>

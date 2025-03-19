@@ -8,7 +8,7 @@
                 </div>
                 <div class="hours-content">
                     <h3>تواصل معانا</h3>
-                    <p>(952+)454545452</p>
+                    <p> {{ Helper::GeneralSiteSettings("contact_t3") }} </p>
                 </div>
             </div>
             <div class="single-hours  align-items-center col-lg-4 col-md-4 col-sm-12">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="hours-content">
                     <h3>للتواصل من خلال البريد الإلكتروني</h3>
-                    <p>info@gmail.com</p>
+                    <p> {{ Helper::GeneralSiteSettings("contact_t6") }} </p>
                 </div>
             </div>
             <div class="single-hours  align-items-center col-lg-4 col-md-4 col-sm-12">
