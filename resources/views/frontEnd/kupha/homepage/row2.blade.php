@@ -30,9 +30,8 @@
                             والخارجية في هذا المجال .
                         </li>
                     </ul>
-                    <div class="read-more-btns">
-                        <a href="login.html" class="primary-btn">تسجيل عضو بالجمعية</a>
-                        <a href="about.html" class="secondary-btn">عرض المزيد</a>
+                    <div class="read-more-btns text-center">
+                        <a href="{{url('أهداف-الجمعية')}}" class="secondary-btn">عرض المزيد</a>
                     </div>
                 </div>
             </div>
