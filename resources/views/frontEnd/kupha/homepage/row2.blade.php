@@ -31,7 +31,7 @@
                         </li>
                     </ul>
                     <div class="read-more-btns text-center">
-                        <a href="{{url('أهداف-الجمعية')}}" class="primary-btn">عرض المزيد</a>
+                        <a href="{{url('ar/أهداف-الجمعية')}}" class="primary-btn">عرض المزيد</a>
                     </div>
                 </div>
             </div>
