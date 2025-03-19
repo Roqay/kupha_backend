@@ -258,9 +258,9 @@
                                     @if ($WebmasterSection->title_status)
                                     <div class="row">
                                         <div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
-                                            <span class="top-title">التفاصيل </span>
+                                            <span class="top-title">{{$webmaster_section_title ??   ""}} </span>
                                             <h2 >
-                                                {{$webmaster_section_title ??   ""}}
+                                                {{$page_title ?? ''}}
                                             </h2>
                                         </div>
                                     </div>
